@@ -1,12 +1,27 @@
-﻿namespace TemplateSevenSource3Dominio
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace TemplateSevenSource3Dominio
 {
     public class Cliente
     {
         public int Id { get; set; }
+        [RegularExpression(@"[a-zA-Z]{3,50}", ErrorMessage = "Apenas letras, mínimo 3 caracteres")]
+        [Required(ErrorMessage = "O Nome é obrigatório")]
+        [DisplayName("Nome")]
         public string Nome { get; set; }
+        [DisplayName("Email")]
+        [RegularExpression(@"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*\s+<(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})>$|^(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})$", ErrorMessage = "Digite um Email válido")]
         public string Email { get; set; }
+        [DisplayName("Senha")]
+        [Required(ErrorMessage = "A Senha é obrigatória")]
         public string Senha { get; set; }
+        [DisplayName("Confirmar")]
+        [Compare("Senha", ErrorMessage = "As senhas são diferentes")]
+        public string ConfirmarSenha { get; set; }
+        [DisplayName("CNH")]
         public int Cnh { get; set; }
+        [DisplayName("CPF")]
         public int Cpf { get; set; }
 
     }
