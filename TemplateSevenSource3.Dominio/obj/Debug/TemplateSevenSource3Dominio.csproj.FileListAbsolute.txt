@@ -15,3 +15,9 @@ C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.Dominio\
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3Dominio.csproj.CoreCompileInputs.cache
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3.Dominio.dll
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3.Dominio.pdb
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\TemplateSevenSource3.Dominio.dll
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\TemplateSevenSource3.Dominio.pdb
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3Dominio.csprojAssemblyReference.cache
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3Dominio.csproj.CoreCompileInputs.cache
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3.Dominio.dll
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3.Dominio.pdb
