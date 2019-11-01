@@ -42,22 +42,6 @@ C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.AcessoDa
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
-<<<<<<< HEAD
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll.config
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.pdb
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\BouncyCastle.Crypto.dll
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.dll
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.dll
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.dll
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.xml
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.xml
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.xml
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csprojAssemblyReference.cache
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
-D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
-=======
 C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll.config
 C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll
 C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.pdb
@@ -73,4 +57,17 @@ C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\o
 C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
 C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
 C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
->>>>>>> 3fc4b22f315ea1ec72420bba1e0f20ea100190a4
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll.config
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.pdb
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\BouncyCastle.Crypto.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.xml
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.xml
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.xml
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csprojAssemblyReference.cache
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb

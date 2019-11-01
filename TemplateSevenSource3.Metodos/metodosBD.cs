@@ -34,8 +34,8 @@ namespace TemplateSevenSource3Metodos
             strQuery += string.Format("EMAILCLIENTE='{0}',", cliente.Email);
             strQuery += string.Format("SENHACLIENTE='{0}',", cliente.Senha);
             strQuery += string.Format("CPFCLIENTE='{0}',", cliente.Cpf);
-            strQuery += string.Format("CNHCLIENTE='{0}' ", cliente.Cnh);
-            strQuery += string.Format("WHERE IDCLIENTE={0};",cliente.Id);
+            strQuery += string.Format("CNHCLIENTE='{0}'", cliente.Cnh);
+            strQuery += string.Format("WHERE IDCLIENTE={0}", cliente.Id);
 
             banco.ExecutarComando(strQuery);
         }
