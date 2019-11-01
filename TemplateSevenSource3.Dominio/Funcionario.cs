@@ -19,8 +19,8 @@ namespace TemplateSevenSource3Dominio
         [DisplayName("Senha")]
         [Required(ErrorMessage = "A Senha é obrigatória")]
         public string Senha { get; set; }
-        [Compare("Senha", ErrorMessage = "As senhas são diferentes")]
-        [DisplayName("Confirmar senha")]
+        [Compare("Senha", ErrorMessage = "As Senhas devem ser iguais")]
+        [DisplayName("Repetir senha")]
         public string ConfirmarSenha { get; set; }
         [DisplayName("CPF")]
         public int Cpf { get; set; }

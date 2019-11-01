@@ -33,5 +33,26 @@ namespace TemplateSevenSource3.Controllers
             }
             return View(cliente);
         }
+        public ActionResult Editar(int id)
+        {
+            var metodosusuario = new metodosBD();
+            var usuario = metodosusuario.ListaId(id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(usuario);
+        }
+        [HttpPost]
+        public ActionResult Editar(Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                var metodosusuario = new metodosBD();
+                metodosusuario.Salvar(cliente);
+                return RedirectToAction("Index");
+            }
+            return View(cliente);
+        }
     }
 }

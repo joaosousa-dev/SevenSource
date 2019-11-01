@@ -30,12 +30,13 @@ namespace TemplateSevenSource3Metodos
         {
             var strQuery = "";
             strQuery += string.Format("UPDATE CLIENTE SET ");
-            strQuery += string.Format("IDCLIENTE={0}", cliente.Id);
-            strQuery += string.Format("NOMECLIENTE='{0}'", cliente.Nome);
-            strQuery += string.Format("EMAILCLIENTE='{0}'", cliente.Email);
-            strQuery += string.Format("SENHACLIENTE='{0}'", cliente.Senha);
-            strQuery += string.Format("CPFCLIENTE='{0}'", cliente.Cpf);
-            strQuery += string.Format("CNHCLIENTE='{0}'", cliente.Cnh);
+            strQuery += string.Format("NOMECLIENTE='{0}',", cliente.Nome);
+            strQuery += string.Format("EMAILCLIENTE='{0}',", cliente.Email);
+            strQuery += string.Format("SENHACLIENTE='{0}',", cliente.Senha);
+            strQuery += string.Format("CPFCLIENTE='{0}',", cliente.Cpf);
+            strQuery += string.Format("CNHCLIENTE='{0}' ", cliente.Cnh);
+            strQuery += string.Format("WHERE IDCLIENTE={0};",cliente.Id);
+
             banco.ExecutarComando(strQuery);
         }
         public List<Cliente> ListarCLI()
@@ -65,6 +66,26 @@ namespace TemplateSevenSource3Metodos
             }
             retorno.Close();
             return cliente;
+        }
+        public Cliente ListaId(int id)
+        {
+            using (banco = new Banco())
+            {
+                var strQuery = string.Format("SELECT * FROM CLIENTE WHERE IDCLIENTE = {0};", id);
+                var retorno = banco.ExecultarConsulta(strQuery);
+                return ListaDeCLI(retorno).FirstOrDefault();
+            }
+        }
+        public void Salvar(Cliente cliente)
+        {
+            if (cliente.Id > 0)
+            {
+                AtualizarCLI(cliente);
+            }
+            else
+            {
+                CadastroCLI(cliente);
+            }
         }
     }
 }
