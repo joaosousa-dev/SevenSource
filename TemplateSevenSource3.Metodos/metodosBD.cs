@@ -17,8 +17,10 @@ namespace TemplateSevenSource3Metodos
         public void CadastroCLI(Cliente cliente)
         {
             var strQuery = "";
-            strQuery += string.Format("INSERT INTO CLIENTE (NOMECLIENTE,EMAILCLIENTE,SENHACLIENTE,CNHCLIENTE,CPFCLIENTE) VALUES ('{0}','{1}','{2}',{3},{4});", cliente.Nome, cliente.Email, cliente.Senha, cliente.Cnh, cliente.Cpf);
+            strQuery += string.Format("INSERT INTO CLIENTE (NOMECLIENTE,EMAILCLIENTE,SENHACLIENTE,CNHCLIENTE,CPFCLIENTE) VALUES ('{0}','{1}','{2}','{3}');", cliente.Nome, cliente.Email, cliente.Cnh, cliente.Cpf);
             banco.ExecutarComando(strQuery);
+          //  strQuery = string.Format("INSERT INTO TELEFONE (TELFIXO,TELMOVEL,IDCLIENTE)VALUES('{0}','{1}','{2}');", cliente.TelFixo, cliente.TelMovel, cliente.Id);
+          //  banco.ExecutarComando(strQuery);
         }
         public void DeletarCLI(Cliente cliente)
         {
@@ -31,8 +33,7 @@ namespace TemplateSevenSource3Metodos
             var strQuery = "";
             strQuery += string.Format("UPDATE CLIENTE SET ");
             strQuery += string.Format("NOMECLIENTE='{0}',", cliente.Nome);
-            strQuery += string.Format("EMAILCLIENTE='{0}',", cliente.Email);
-            strQuery += string.Format("SENHACLIENTE='{0}',", cliente.Senha);
+            strQuery += string.Format("EMAILCLIENTE='{0}',", cliente.Email);           
             strQuery += string.Format("CPFCLIENTE='{0}',", cliente.Cpf);
             strQuery += string.Format("CNHCLIENTE='{0}'", cliente.Cnh);
             strQuery += string.Format("WHERE IDCLIENTE={0}", cliente.Id);
@@ -58,9 +59,8 @@ namespace TemplateSevenSource3Metodos
                     Id = int.Parse(retorno["IDCLIENTE"].ToString()),
                     Nome = retorno["NOMECLIENTE"].ToString(),
                     Email = retorno["EMAILCLIENTE"].ToString(),
-                    Senha = retorno["SENHACLIENTE"].ToString(),
-                    Cnh = int.Parse(retorno["CNHCLIENTE"].ToString()),
-                    Cpf = int.Parse(retorno["CPFCLIENTE"].ToString())
+                    Cnh = retorno["CNHCLIENTE"].ToString(),
+                    Cpf = retorno["CPFCLIENTE"].ToString()
                 };
                 cliente.Add(TempCliente);
             }
