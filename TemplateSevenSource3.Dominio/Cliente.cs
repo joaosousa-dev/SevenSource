@@ -5,7 +5,7 @@ namespace TemplateSevenSource3Dominio
 {
     public class Cliente
     {
-        public int Id { get; set; }
+        
         [RegularExpression(@"[a-zA-Z]{3,50}", ErrorMessage = "Apenas letras, mínimo 3 caracteres")]
         [Required(ErrorMessage = "O Nome é obrigatório")]
         [DisplayName("Nome")]
@@ -16,10 +16,12 @@ namespace TemplateSevenSource3Dominio
         [DisplayName("CNH")]
         public string Cnh { get; set; }
         [DisplayName("CPF")]
-        public string Cpf { get; set; }
+        public long Cpf { get; set; }
         [DisplayName("Telefone Móvel")]
         public string TelMovel { get; set; }
         [DisplayName("Telefone Fixo")]
         public string TelFixo { get; set; }
+
+       // https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
     }
 }

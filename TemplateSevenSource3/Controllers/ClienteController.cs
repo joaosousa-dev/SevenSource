@@ -33,10 +33,10 @@ namespace TemplateSevenSource3.Controllers
             }
             return View(cliente);
         }
-        public ActionResult Editar(int id)
+        public ActionResult Editar(long cpf)
         {
             var metodosusuario = new metodosBD();
-            var usuario = metodosusuario.ListaId(id);
+            var usuario = metodosusuario.ListaId(cpf);
             if (usuario == null)
             {
                 return HttpNotFound();

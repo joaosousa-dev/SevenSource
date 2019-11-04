@@ -43,9 +43,9 @@
                         @Html.DisplayFor(modelItem => item.Cpf)
                     </td>
                     <td>
-                        @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
-                        @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
-                        @Html.ActionLink("Apagar", "Apagar", new { id = item.Id })
+                        @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf }) |
+                        @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf }) |
+                        @Html.ActionLink("Apagar", "Apagar", new { cpf= item.Cpf })
                     </td>
                 </tr>
             }

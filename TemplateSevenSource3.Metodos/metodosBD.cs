@@ -17,15 +17,17 @@ namespace TemplateSevenSource3Metodos
         public void CadastroCLI(Cliente cliente)
         {
             var strQuery = "";
-            strQuery += string.Format("INSERT INTO CLIENTE (NOMECLIENTE,EMAILCLIENTE,SENHACLIENTE,CNHCLIENTE,CPFCLIENTE) VALUES ('{0}','{1}','{2}','{3}');", cliente.Nome, cliente.Email, cliente.Cnh, cliente.Cpf);
+            
+            strQuery += string.Format("INSERT INTO CLIENTE (NOMECLIENTE,EMAILCLIENTE,CNHCLIENTE,CPFCLIENTE) VALUES ('{0}','{1}','{2}','{3}');", cliente.Nome, cliente.Email, cliente.Cnh, cliente.Cpf);
             banco.ExecutarComando(strQuery);
-          //  strQuery = string.Format("INSERT INTO TELEFONE (TELFIXO,TELMOVEL,IDCLIENTE)VALUES('{0}','{1}','{2}');", cliente.TelFixo, cliente.TelMovel, cliente.Id);
-          //  banco.ExecutarComando(strQuery);
+            strQuery = string.Format("INSERT INTO TELEFONE (TELFIXO,TELMOVEL,CPFCLIENTE)VALUES('{0}','{1}',{2});", cliente.TelFixo, cliente.TelMovel,cliente.Cpf);
+            banco.ExecutarComando(strQuery);
+            
         }
         public void DeletarCLI(Cliente cliente)
         {
             var strQuery = "";
-            strQuery += string.Format("DELETE FROM CLIENTE WHERE IDCLIENTE={0}", cliente.Id);
+            strQuery += string.Format("DELETE FROM CLIENTE WHERE CPFCLIENTE={0}", cliente.Cpf);
             banco.ExecutarComando(strQuery);
         }
         public void AtualizarCLI(Cliente cliente)
@@ -34,9 +36,9 @@ namespace TemplateSevenSource3Metodos
             strQuery += string.Format("UPDATE CLIENTE SET ");
             strQuery += string.Format("NOMECLIENTE='{0}',", cliente.Nome);
             strQuery += string.Format("EMAILCLIENTE='{0}',", cliente.Email);           
-            strQuery += string.Format("CPFCLIENTE='{0}',", cliente.Cpf);
+            //strQuery += string.Format("CPFCLIENTE='{0}',", cliente.Cpf);
             strQuery += string.Format("CNHCLIENTE='{0}'", cliente.Cnh);
-            strQuery += string.Format("WHERE IDCLIENTE={0}", cliente.Id);
+            strQuery += string.Format("WHERE CPFCLIENTE={0}", cliente.Cpf);
 
             banco.ExecutarComando(strQuery);
         }
@@ -56,29 +58,29 @@ namespace TemplateSevenSource3Metodos
             {
                 var TempCliente = new Cliente()
                 {
-                    Id = int.Parse(retorno["IDCLIENTE"].ToString()),
+
                     Nome = retorno["NOMECLIENTE"].ToString(),
                     Email = retorno["EMAILCLIENTE"].ToString(),
                     Cnh = retorno["CNHCLIENTE"].ToString(),
-                    Cpf = retorno["CPFCLIENTE"].ToString()
+                    Cpf = long.Parse(retorno["CPFCLIENTE"].ToString())
                 };
                 cliente.Add(TempCliente);
             }
             retorno.Close();
             return cliente;
         }
-        public Cliente ListaId(int id)
+        public Cliente ListaId(long cpf)
         {
             using (banco = new Banco())
             {
-                var strQuery = string.Format("SELECT * FROM CLIENTE WHERE IDCLIENTE = {0};", id);
+                var strQuery = string.Format("SELECT * FROM CLIENTE WHERE CPFCLIENTE = {0};", cpf);
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeCLI(retorno).FirstOrDefault();
             }
         }
         public void Salvar(Cliente cliente)
         {
-            if (cliente.Id > 0)
+            if (cliente.Cpf> 0)
             {
                 AtualizarCLI(cliente);
             }
