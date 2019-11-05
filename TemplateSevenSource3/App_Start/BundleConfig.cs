@@ -25,6 +25,14 @@ namespace TemplateSevenSource3
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/inputmask").Include(
+            //~/Scripts/inputmask/dependencyLibs/inputmask.dependencyLib.js",  //if not using jquery
+            "~/Scripts/inputmask/inputmask.js",
+            "~/Scripts/inputmask/jquery.inputmask.js",
+            "~/Scripts/inputmask/inputmask.extensions.js",
+            "~/Scripts/inputmask/inputmask.date.extensions.js",
+            //and other extensions you want to include
+            "~/Scripts/inputmask/inputmask.numeric.extensions.js"));
         }
     }
 }
