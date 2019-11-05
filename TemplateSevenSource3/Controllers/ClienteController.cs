@@ -57,6 +57,18 @@ namespace TemplateSevenSource3.Controllers
         public ActionResult Apagar(long cpf)
         {
             var metodosusuario = new metodosBD();
+            var cliente=metodosusuario.ListaId(cpf);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
+
+        [HttpPost]
+        public ActionResult Apagar(Cliente cliente,long cpf)
+        {
+            var metodosusuario = new metodosBD();
             metodosusuario.DeletarCLI(cpf);
             return RedirectToAction("Index");
         }

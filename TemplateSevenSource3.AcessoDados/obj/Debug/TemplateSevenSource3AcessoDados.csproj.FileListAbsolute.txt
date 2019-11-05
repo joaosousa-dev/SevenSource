@@ -71,3 +71,18 @@ D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bb
 D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
 D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
 D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource-3fc4b22f315ea1ec72420bba1e0f20ea100190a4\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll.config
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.pdb
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.dll
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.dll
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.dll
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.xml
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.xml
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.xml
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csprojAssemblyReference.cache
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
+C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb

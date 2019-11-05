@@ -16,7 +16,7 @@ namespace TemplateSevenSource3AcessoDados
 
         public Banco()
         {
-            conexao = new SqlConnection(@"Data Source=DESKTOP-238TNF3;Initial Catalog=LOCADORASEVENCAR;User ID=sa;Password=1234567");
+            conexao = new SqlConnection(@"Data Source=DESKTOP-27LJMF4;Initial Catalog=LOCADORASEVENCAR;User ID=sa;Password=1234567");
             conexao.Open();
         }
         public void ExecutarComando(string strQuery)
