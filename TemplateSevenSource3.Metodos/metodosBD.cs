@@ -24,10 +24,12 @@ namespace TemplateSevenSource3Metodos
             banco.ExecutarComando(strQuery);
             
         }
-        public void DeletarCLI(Cliente cliente)
+        public void DeletarCLI(long cpf)
         {
             var strQuery = "";
-            strQuery += string.Format("DELETE FROM CLIENTE WHERE CPFCLIENTE={0}", cliente.Cpf);
+            strQuery += string.Format("DELETE FROM TELEFONE WHERE CPFCLIENTE={0}", cpf);
+            banco.ExecutarComando(strQuery);
+            strQuery += string.Format("DELETE FROM CLIENTE WHERE CPFCLIENTE={0}", cpf);
             banco.ExecutarComando(strQuery);
         }
         public void AtualizarCLI(Cliente cliente)

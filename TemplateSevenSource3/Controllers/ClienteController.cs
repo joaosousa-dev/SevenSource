@@ -54,5 +54,11 @@ namespace TemplateSevenSource3.Controllers
             }
             return View(cliente);
         }
+        public ActionResult Apagar(long cpf)
+        {
+            var metodosusuario = new metodosBD();
+            metodosusuario.DeletarCLI(cpf);
+            return RedirectToAction("Index");
+        }
     }
 }
