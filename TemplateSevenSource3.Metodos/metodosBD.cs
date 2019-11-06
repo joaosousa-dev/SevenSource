@@ -48,7 +48,7 @@ namespace TemplateSevenSource3Metodos
         {
             using (banco = new Banco())
             {
-                var strQuery = "SELECT * FROM CLIENTE;";
+                var strQuery = "SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE;";
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeCLI(retorno);
             };
@@ -64,7 +64,9 @@ namespace TemplateSevenSource3Metodos
                     Nome = retorno["NOMECLIENTE"].ToString(),
                     Email = retorno["EMAILCLIENTE"].ToString(),
                     Cnh = retorno["CNHCLIENTE"].ToString(),
-                    Cpf = long.Parse(retorno["CPFCLIENTE"].ToString())
+                    Cpf = long.Parse(retorno["CPFCLIENTE"].ToString()),
+                    TelMovel = retorno["TELMOVEL"].ToString(),
+                    TelFixo = retorno["TELFIXO"].ToString()
                 };
                 cliente.Add(TempCliente);
             }
@@ -75,8 +77,8 @@ namespace TemplateSevenSource3Metodos
         {
             using (banco = new Banco())
             {
-                var strQuery = string.Format("SELECT * FROM CLIENTE WHERE CPFCLIENTE = {0};", cpf);
-                var retorno = banco.ExecultarConsulta(strQuery);
+                var strQuery = string.Format("SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE where T.CPFCLIENTE={0}", cpf);
+                var retorno = banco.ExecultarConsulta(strQuery);               
                 return ListaDeCLI(retorno).FirstOrDefault();
             }
         }

@@ -24,30 +24,31 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Cpf)
                 </th>
+                
                 <th></th>
             </tr>
 
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Cnh)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Cpf)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf }) |
-                        @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf }) |
-                        @Html.ActionLink("Apagar", "Apagar", new { cpf= item.Cpf })
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cnh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf }) |
+                    @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf }) |
+                    @Html.ActionLink("Apagar", "Apagar", new { cpf = item.Cpf })
+                </td>
+            </tr>
             }
 
         </table>

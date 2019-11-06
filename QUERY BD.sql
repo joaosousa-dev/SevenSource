@@ -134,3 +134,7 @@ drop database LOCADORASEVENCAR;
 
 select * from telefone;
 select * from cliente;
+
+SELECT * FROM TELEFONE as T
+INNER JOIN CLIENTE as C
+   on T.CPFCLIENTE = C.CPFCLIENTE where T.CPFCLIENTE=1234567896
