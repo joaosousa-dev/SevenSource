@@ -41,7 +41,11 @@ namespace TemplateSevenSource3Metodos
             //strQuery += string.Format("CPFCLIENTE='{0}',", cliente.Cpf);
             strQuery += string.Format("CNHCLIENTE='{0}'", cliente.Cnh);
             strQuery += string.Format("WHERE CPFCLIENTE={0}", cliente.Cpf);
-
+            banco.ExecutarComando(strQuery);
+            strQuery = string.Format("UPDATE TELEFONE SET ");
+            strQuery += string.Format("TELMOVEL={0},", cliente.TelMovel);
+            strQuery += string.Format("TELFIXO={0} ", cliente.TelFixo);
+            strQuery += string.Format("WHERE CPFCLIENTE={0}", cliente.Cpf);
             banco.ExecutarComando(strQuery);
         }
         public List<Cliente> ListarCLI()

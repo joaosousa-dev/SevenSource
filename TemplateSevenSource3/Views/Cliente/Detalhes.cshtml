@@ -1,0 +1,66 @@
+﻿@model TemplateSevenSource3Dominio.Cliente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cnh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cnh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelMovel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelMovel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelFixo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelFixo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new {  cpf = Model.Cpf }) |
+    @Html.ActionLink("Voltar à lista", "Index")
+</p>

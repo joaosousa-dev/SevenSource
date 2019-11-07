@@ -4,32 +4,32 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div style="margin-right:auto; margin-left:auto;">
-        <h2>Clientes Cadastrados</h2>
+<div style="margin-right:auto; margin-left:auto;">
+    <h2>Clientes Cadastrados</h2>
 
-        <p>
-            @Html.ActionLink("Novo Cliente", "Cadastro")
-        </p>
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nome)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cnh)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Cpf)
-                </th>
-                
-                <th></th>
-            </tr>
+    <p>
+        @Html.ActionLink("Novo Cliente", "Cadastro")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cnh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
 
-            @foreach (var item in Model)
-            {
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Nome)
@@ -49,7 +49,20 @@
                     @Html.ActionLink("Apagar", "Apagar", new { cpf = item.Cpf })
                 </td>
             </tr>
-            }
+        }
 
-        </table>
-    </div>
+    </table>
+</div>
+<p>Telefone: <input type="text" id="telefone" /></p>
+<p>Data: <input type="text" id="calendario" /></p>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#telefone").inputmask("mask", { "mask": "(99)99999-9999" });
+            var lang = window.navigator.userLanguage || window.navigator.language;
+            lang = lang.substring(0, 2);
+            $("#calendario").datepicker();
+            $.datepicker.setDefaults($.datepicker.regional[lang]);
+        });
+    </script>
+}

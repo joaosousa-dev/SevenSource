@@ -36,12 +36,12 @@ namespace TemplateSevenSource3.Controllers
         public ActionResult Editar(long cpf)
         {
             var metodosusuario = new metodosBD();
-            var usuario = metodosusuario.ListaId(cpf);
-            if (usuario == null)
+            var cliente = metodosusuario.ListaId(cpf);
+            if (cliente == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            return View(cliente);
         }
         [HttpPost]
         public ActionResult Editar(Cliente cliente)
@@ -72,5 +72,17 @@ namespace TemplateSevenSource3.Controllers
             metodosusuario.DeletarCLI(cpf);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Detalhes(long cpf)
+        {
+            var metodosusuario = new metodosBD();
+           var cliente = metodosusuario.ListaId(cpf);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            return View(cliente);
+        }
+        
     }
 }
