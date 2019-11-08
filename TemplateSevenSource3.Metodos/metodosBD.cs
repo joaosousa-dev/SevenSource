@@ -43,8 +43,8 @@ namespace TemplateSevenSource3Metodos
             strQuery += string.Format("WHERE CPFCLIENTE={0}", cliente.Cpf);
             banco.ExecutarComando(strQuery);
             strQuery = string.Format("UPDATE TELEFONE SET ");
-            strQuery += string.Format("TELMOVEL={0},", cliente.TelMovel);
-            strQuery += string.Format("TELFIXO={0} ", cliente.TelFixo);
+            strQuery += string.Format("TELMOVEL='{0}',", cliente.TelMovel);
+            strQuery += string.Format("TELFIXO='{0}' ", cliente.TelFixo);
             strQuery += string.Format("WHERE CPFCLIENTE={0}", cliente.Cpf);
             banco.ExecutarComando(strQuery);
         }

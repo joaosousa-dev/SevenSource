@@ -6,7 +6,7 @@ namespace TemplateSevenSource3Dominio
     public class Cliente
     {
         
-        [RegularExpression(@"[a-zA-Z]{3,50}", ErrorMessage = "Apenas letras, mínimo 3 caracteres")]
+        [RegularExpression(@"[a-z A-Z]{3,50}", ErrorMessage = "Apenas letras, mínimo 3 caracteres")]
         [Required(ErrorMessage = "O Nome é obrigatório")]
         [DisplayName("Nome")]
         public string Nome { get; set; }
@@ -21,7 +21,18 @@ namespace TemplateSevenSource3Dominio
         public string TelMovel { get; set; }
         [DisplayName("Telefone Fixo")]
         public string TelFixo { get; set; }
-
-       // https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
+        [DisplayName("Rua")]
+        public string Rua { get; set; }
+        [DisplayName("Número")]
+        public string Numero { get; set; }
+        [DisplayName("Cidade")]
+        public string Cidade { get; set; }
+        [DisplayName("Bairro")]
+        public string Bairro { get; set; }
+        [DisplayName("Telefone Fixo")]
+        public string Estado { get; set; }
+        [DisplayName("Telefone Fixo")]
+        public string Cep { get; set; }
+        // https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
     }
 }
