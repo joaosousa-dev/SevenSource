@@ -29,9 +29,9 @@ namespace TemplateSevenSource3Dominio
         public string Cidade { get; set; }
         [DisplayName("Bairro")]
         public string Bairro { get; set; }
-        [DisplayName("Telefone Fixo")]
+        [DisplayName("Bairro")]
         public string Estado { get; set; }
-        [DisplayName("Telefone Fixo")]
+        [DisplayName("Estado")]
         public string Cep { get; set; }
         // https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
     }

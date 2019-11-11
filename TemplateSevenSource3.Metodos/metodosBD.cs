@@ -17,7 +17,8 @@ namespace TemplateSevenSource3Metodos
         public void CadastroCLI(Cliente cliente)
         {
             var strQuery = "";
-            
+            //strQuery = string.Format("INSERT INTO ENDERECO(RUA, NUMERO, CIDADE, BAIRRO, ESTADO, CEP) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", cliente.Rua,cliente.Numero,cliente.Cidade,cliente.Bairro,cliente.Estado,cliente.Cep) ;
+            //banco.ExecutarComando(strQuery);
             strQuery += string.Format("INSERT INTO CLIENTE (NOMECLIENTE,EMAILCLIENTE,CNHCLIENTE,CPFCLIENTE) VALUES ('{0}','{1}','{2}','{3}');", cliente.Nome, cliente.Email, cliente.Cnh, cliente.Cpf);
             banco.ExecutarComando(strQuery);
             strQuery = string.Format("INSERT INTO TELEFONE (TELFIXO,TELMOVEL,CPFCLIENTE)VALUES('{0}','{1}',{2});", cliente.TelFixo, cliente.TelMovel,cliente.Cpf);
@@ -52,7 +53,8 @@ namespace TemplateSevenSource3Metodos
         {
             using (banco = new Banco())
             {
-                var strQuery = "SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE;";
+                //var strQuery = "SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE;";
+                var strQuery = "SELECT * FROM VWCLIENTE;";
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeCLI(retorno);
             };
@@ -70,7 +72,13 @@ namespace TemplateSevenSource3Metodos
                     Cnh = retorno["CNHCLIENTE"].ToString(),
                     Cpf = long.Parse(retorno["CPFCLIENTE"].ToString()),
                     TelMovel = retorno["TELMOVEL"].ToString(),
-                    TelFixo = retorno["TELFIXO"].ToString()
+                    TelFixo = retorno["TELFIXO"].ToString(),
+                    Rua = retorno["RUA"].ToString(),
+                    Numero = retorno["NUMERO"].ToString(),
+                    Bairro = retorno["BAIRRO"].ToString(),
+                    Cidade = retorno["CIDADE"].ToString(),
+                    Estado = retorno["ESTADO"].ToString(),
+                    Cep = retorno["CEP"].ToString()
                 };
                 cliente.Add(TempCliente);
             }
@@ -81,7 +89,8 @@ namespace TemplateSevenSource3Metodos
         {
             using (banco = new Banco())
             {
-                var strQuery = string.Format("SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE where T.CPFCLIENTE={0}", cpf);
+                // var strQuery = string.Format("SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE where T.CPFCLIENTE={0}", cpf);
+                var strQuery = string.Format("SELECT * FROM VWCLIENTE where CPFCLIENTE={0}", cpf);
                 var retorno = banco.ExecultarConsulta(strQuery);               
                 return ListaDeCLI(retorno).FirstOrDefault();
             }

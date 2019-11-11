@@ -86,3 +86,17 @@ C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\
 C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
 C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
 C:\Users\2binfo\Documents\Joao\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll.config
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.AcessoDados.pdb
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\BouncyCastle.Crypto.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Google.Protobuf.xml
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\MySql.Data.xml
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\Renci.SshNet.xml
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csprojAssemblyReference.cache
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3AcessoDados.csproj.CopyComplete
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.dll
+D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
