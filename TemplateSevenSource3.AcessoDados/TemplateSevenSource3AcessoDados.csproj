@@ -78,5 +78,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateSevenSource3.Dominio\TemplateSevenSource3Dominio.csproj">
+      <Project>{929324F1-5B48-4F82-AA0E-B447212B6F46}</Project>
+      <Name>TemplateSevenSource3Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

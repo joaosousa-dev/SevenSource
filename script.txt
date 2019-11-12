@@ -1,0 +1,17 @@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            $("#telefonemovel").inputmask("mask", { "mask": "(99)99999-9999" });
+            $("#telefonefixo").inputmask("mask", { "mask": "(99)9999-9999" });
+            $("#cnh").inputmask("mask", { "mask": "99999999999" });
+            var lang = window.navigator.userLanguage || window.navigator.language;
+            lang = lang.substring(0, 2);
+            $("#calendario").datepicker();
+            $.datepicker.setDefaults($.datepicker.regional[lang]);
+        });
+    </script>
+}
