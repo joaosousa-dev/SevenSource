@@ -102,3 +102,5 @@ D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.Ac
 D:\Users\Celso\Desktop\joao\####SGLV 7source\SevenSource\TemplateSevenSource3.AcessoDados\obj\Debug\TemplateSevenSource3.AcessoDados.pdb
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.Dominio.dll
 C:\Users\2binfo\Documents\Joao\7SOURCE\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.Dominio.pdb
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.Dominio.dll
+C:\Users\2binfo.BASILIDES\Desktop\SevenSource\TemplateSevenSource3.AcessoDados\bin\Debug\TemplateSevenSource3.Dominio.pdb

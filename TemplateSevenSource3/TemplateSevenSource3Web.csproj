@@ -199,6 +199,7 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Apagar.cshtml" />
     <Content Include="Views\Cliente\Detalhes.cshtml" />
+    <Content Include="Views\Shared\_LayoutIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
