@@ -143,6 +143,8 @@
     <Content Include="Imagens2\carrofamilia.jpg" />
     <Content Include="Imagens2\carroseg.jpg" />
     <Content Include="Imagens2\carroviajar.jpg" />
+    <Content Include="Imagens2\Funcionario2.jpg" />
+    <Content Include="Imagens2\Funcionariosimg.jpg" />
     <Content Include="Imagens2\images.jfif" />
     <Content Include="Imagens2\KAiTghC.jpg" />
     <Content Include="Imagens2\relax_4k.jpg" />
@@ -199,12 +201,11 @@
     <Content Include="Views\Cliente\Apagar.cshtml" />
     <Content Include="Views\Cliente\Detalhes.cshtml" />
     <Content Include="Views\Shared\_LayoutIndex.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Funcionario\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Funcionario\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
