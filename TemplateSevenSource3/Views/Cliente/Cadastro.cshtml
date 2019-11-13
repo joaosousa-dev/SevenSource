@@ -42,7 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Cpf, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "form-control", id = string.Format("cpf") } })
                 @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -134,6 +134,7 @@
             $("#telefonefixo").inputmask("mask", { "mask": "(99)9999-9999" });
             $("#cnh").inputmask("mask", { "mask": "99999999999" });
             $("#cep").inputmask("mask", { "mask": "99999-999" });
+            $("#cpf").inputmask("mask", { "mask": "99999999999" });
             var lang = window.navigator.userLanguage || window.navigator.language;
             lang = lang.substring(0, 2);
             $("#calendario").datepicker();

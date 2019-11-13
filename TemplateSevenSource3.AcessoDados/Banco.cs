@@ -17,7 +17,7 @@ namespace TemplateSevenSource3AcessoDados
 
         public Banco()
         {
-            conexao = new SqlConnection(@"Data Source=DESKTOP-238TNF3;Initial Catalog=LOCADORASEVENCAR;User ID=sa;Password=1234567");
+            conexao = new SqlConnection(@"Data Source=LAB2PC013;Initial Catalog=LOCADORASEVENCAR;User ID=sa;Password=1234567");
             conexao.Open();
         }
         public void ExecutarComando(string strQuery)
@@ -49,10 +49,13 @@ namespace TemplateSevenSource3AcessoDados
         }
         public int RetornaIdEnd(Cliente cliente)
         {
-            string str = string.Format("Select IDENDERECO from vwcliente where RUA='{0}' and NUMERO='{1}' and BAIRRO='{2}' and ESTADO='{3}' and CIDADE='{4}'and CEP='{5}';", cliente.Rua, cliente.Numero, cliente.Bairro, cliente.Estado, cliente.Cidade, cliente.Cep);
             int id = 0;
-            SqlCommand comando = new SqlCommand(str, conexao);
-            id=(int)comando.ExecuteScalar();
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            string str = string.Format("Select IDENDERECO from ENDERECO where RUA='{0}' and NUMERO='{1}' and BAIRRO='{2}' and ESTADO='{3}' and CIDADE='{4}'and CEP='{5}';", cliente.Rua, cliente.Numero, cliente.Bairro, cliente.Estado, cliente.Cidade, cliente.Cep);
+            da = new SqlDataAdapter(str, conexao);
+            da.Fill(dt);
+            id = (int)dt.Rows[0]["IDENDERECO"];
             return id;
         }
 
