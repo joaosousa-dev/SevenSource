@@ -35,12 +35,15 @@ namespace TemplateSevenSource3.Controllers
         }
         public ActionResult Editar(long cpf)
         {
+            var banco = new Banco();
             var metodosusuario = new metodosBD();
-            var cliente = metodosusuario.ListaId(cpf);
+            var cliente = metodosusuario.ListaId(cpf);            
+            cliente.idend= banco.RetornaIdEnd(cliente);
             if (cliente == null)
             {
                 return HttpNotFound();
             }
+            
             return View(cliente);
         }
         [HttpPost]

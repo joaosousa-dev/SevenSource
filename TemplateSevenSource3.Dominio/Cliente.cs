@@ -16,6 +16,8 @@ namespace TemplateSevenSource3Dominio
         [DisplayName("CNH")]
         public string Cnh { get; set; }
         [DisplayName("CPF")]
+        [Required(ErrorMessage = "O CPF é obrigatório")]
+        [RegularExpression(@"[1-9]{11,11}", ErrorMessage = "CPF 11 Dígitos")]
         public long Cpf { get; set; }
         [DisplayName("Telefone Móvel")]
         public string TelMovel { get; set; }
