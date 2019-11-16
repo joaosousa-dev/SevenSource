@@ -1,11 +1,12 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace TemplateSevenSource3Dominio
 {
     public class Cliente
     {
-        
+
         [RegularExpression(@"[a-z A-Z]{3,50}", ErrorMessage = "Apenas letras, mínimo 3 caracteres")]
         [Required(ErrorMessage = "O Nome é obrigatório")]
         [DisplayName("Nome")]
@@ -37,5 +38,7 @@ namespace TemplateSevenSource3Dominio
         public string Cep { get; set; }
         public int idend { get; set; }
         // https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html
+
+
     }
 }

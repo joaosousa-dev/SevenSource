@@ -26,5 +26,6 @@ namespace TemplateSevenSource3Dominio
         public int Cpf { get; set; }
         [DisplayName("Cargo")]
         public int IdCargo { get; set; }
+        public int Nivel { get; set; }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace TemplateSevenSource3Dominio
+namespace TemplateSevenSource3.Dominio
 {
     public class Marca
     {

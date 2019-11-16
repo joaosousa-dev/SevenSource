@@ -62,7 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="metodosBD.cs" />
+    <Compile Include="metodosBDCLI.cs" />
+    <Compile Include="MetodosBDVEICULO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

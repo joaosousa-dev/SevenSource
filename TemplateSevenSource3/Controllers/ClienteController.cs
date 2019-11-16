@@ -14,7 +14,7 @@ namespace TemplateSevenSource3.Controllers
         // GET: Cliente
         public ActionResult Index()
         {
-            var metodosbd = new metodosBD();
+            var metodosbd = new metodosBDCLI();
             var todosclientes = metodosbd.ListarCLI(); 
             return View(todosclientes);
         }
@@ -27,7 +27,7 @@ namespace TemplateSevenSource3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var metodosbd = new metodosBD();
+                var metodosbd = new metodosBDCLI();
                 metodosbd.CadastroCLI(cliente);
                 return RedirectToAction("Index");
             }
@@ -36,7 +36,7 @@ namespace TemplateSevenSource3.Controllers
         public ActionResult Editar(long cpf)
         {
             var banco = new Banco();
-            var metodosusuario = new metodosBD();
+            var metodosusuario = new metodosBDCLI();
             var cliente = metodosusuario.ListaId(cpf);            
             cliente.idend= banco.RetornaIdEnd(cliente);
             if (cliente == null)
@@ -51,15 +51,15 @@ namespace TemplateSevenSource3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var metodosusuario = new metodosBD();
-                metodosusuario.Salvar(cliente);
+                var metodosusuario = new metodosBDCLI();
+                metodosusuario.AtualizarCLI(cliente);
                 return RedirectToAction("Index");
             }
             return View(cliente);
         }
         public ActionResult Apagar(long cpf)
         {
-            var metodosusuario = new metodosBD();
+            var metodosusuario = new metodosBDCLI();
             var cliente=metodosusuario.ListaId(cpf);
             if (cliente == null)
             {
@@ -71,14 +71,14 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Apagar(Cliente cliente,long cpf)
         {
-            var metodosusuario = new metodosBD();
+            var metodosusuario = new metodosBDCLI();
             metodosusuario.DeletarCLI(cpf);
             return RedirectToAction("Index");
         }
 
         public ActionResult Detalhes(long cpf)
         {
-            var metodosusuario = new metodosBD();
+            var metodosusuario = new metodosBDCLI();
            var cliente = metodosusuario.ListaId(cpf);
             if (cliente == null)
             {
