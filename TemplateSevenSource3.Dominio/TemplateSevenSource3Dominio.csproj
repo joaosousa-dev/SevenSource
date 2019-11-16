@@ -48,6 +48,7 @@
     <Compile Include="Devolucao.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Locacao.cs" />
+    <Compile Include="Manutencao.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Veiculo.cs" />

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TemplateSevenSource3.Dominio.Marca>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Marcas cadastradas</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar nova marca", "Cadastro")
+</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Id)</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
+                @Html.ActionLink("Apagar", "Deletar", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

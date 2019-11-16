@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="        width: 100%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        background-image: url('../../Imagens2/Funcionario2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover" class="container">
+
+    <div style="border-style:solid; border-radius:10px;background:rgba(128, 128, 128, 0.79); width:40%; padding:50px; margin:auto; margin-top:10%; display: flex; flex-direction: row; justify-content: center; align-items: center">
+        <form class="form-signin" style="text-align:center;">
+            <h2 class="form-signin-heading">Login Funcionário</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus><br /><br />
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required><br /><br />
+
+            <button style="width:50%; text-align:center; display:inline" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        </form>
+        <br />
+
+    </div> <!-- /container -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - FulanoCar Aluguel de Veiculos</p>
+    </footer>
+</body>
+</html>

@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace TemplateSevenSource3.Dominio
 {
-    public class Categoria
+    public class Manutencao
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         [DataType(DataType.MultilineText)]
         public string Descricao { get; set; }
-        public string Tipo { get; set; }
-        public decimal Valor_p_dia { get; set; }
     }
 }
