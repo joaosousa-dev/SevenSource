@@ -78,7 +78,7 @@ MODELO VARCHAR(15),
 ANO NUMERIC(4),
 PLACA VARCHAR(8) UNIQUE,
 CAMBIO CHAR(1),
-STATUS VARCHAR(20),
+STATUS_VEICULO VARCHAR(20),
 IDCATEGORIA INT,
 IDMARCA INT,
 IDMANUTENCAO INT ,
@@ -129,7 +129,7 @@ drop table PAGAMENTO;
 drop database LOCADORASEVENCAR;
 drop view vwcliente;
 
-select * from endereco;
+select * from marca;
 select * from cliente;
 
 SELECT * FROM TELEFONE as T

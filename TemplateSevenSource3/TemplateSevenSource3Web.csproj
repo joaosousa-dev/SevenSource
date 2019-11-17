@@ -156,7 +156,11 @@
     <Content Include="Imagens2\images.jfif" />
     <Content Include="Imagens2\KAiTghC.jpg" />
     <Content Include="Imagens2\relax_4k.jpg" />
+    <Content Include="Imagens2\sandero-rs.jpg" />
     <Content Include="Imagens2\small-memory-lp.jpg" />
+    <Content Include="Imagens2\thumb-1920-502124.jpg" />
+    <Content Include="Imagens2\voyage.jpg" />
+    <Content Include="Imagens2\índice.jpg" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.pdb" />
     <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css" />

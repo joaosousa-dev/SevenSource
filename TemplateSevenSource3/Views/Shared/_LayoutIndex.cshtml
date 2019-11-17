@@ -3,12 +3,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>@ViewBag.Title - DunlexCar</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,7 +25,20 @@
                             <li>@Html.ActionLink("Funcionário", "Menu", "Funcionario")</li>
                         </ul>
                     </li>
+                    <li>@Html.ActionLink("Veículos", "IndexCliente", "Veiculo")</li>
+                    <li>@Html.ActionLink("Categorias de veículos", "IndexCliente", "Categoria")</li>
+                    <li>@Html.ActionLink("Marcas de veículos", "IndexCliente", "Marca")</li>
+
                 </ul>
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Procurar">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </form>
+
+
             </div>
             <!--/.navbar-collapse -->
         </div>
@@ -33,9 +46,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos</p>
-        </footer>
+        <div class="container body-content" style="text-align:center">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos</p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

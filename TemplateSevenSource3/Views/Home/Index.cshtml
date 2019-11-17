@@ -1,5 +1,6 @@
 ﻿
 @{
+    ViewBag.Title = "Inicio";
     Layout = "~/Views/Shared/_LayoutIndex.cshtml";
 }
 
@@ -8,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -23,32 +24,32 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="~/Imagens2/relax_4k.jpg" alt="First slide">
+                <img class="first-slide" src="~/Imagens2/thumb-1920-502124.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Example headline.</h1>
-                        <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        <h1>Um carro para chamar de seu por assinatura.</h1>
+                        <p>Carros para todos os gostos, basta você querer</p>
+                        <p><a class="btn btn-lg btn-primary" href="~/Veiculo/IndexCliente" role="button">Alugue já</a></p>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="~/Imagens2/small-memory-lp.jpg" alt="Second slide">
+                <img class="second-slide" src="~/Imagens2/voyage.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        <h1>Preço justo.</h1>
+                        <p>Aqui na DunlexCar você encontra um preço justo que cabe no seu bolso.Planos a partir de 30R$</p>
+                        <p><a class="btn btn-lg btn-primary" href="~/Veiculo/IndexCliente" role="button">Alugue já</a></p>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img class="third-slide" src="~/Imagens2/KAiTghC.jpg" alt="Third slide">
+                <img class="third-slide" src="~/Imagens2/sandero-rs.jpg" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        <h1>Segurança em primeiro lugar!</h1>
+                        <p>Aqui na DunlexCar prezamos pela segurança do cliente,a sua vida não tem preço!</p>
+                        <p><a class="btn btn-lg btn-primary" href="~/Veiculo/IndexCliente" role="button">Alugue já</a></p>
                     </div>
                 </div>
             </div>
@@ -105,15 +106,27 @@
             <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" src="~/Imagens2/carrofamilia.jpg" alt="Generic placeholder image">
             </div>
+        </div><br>
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="/Categoria/Index" class="thumbnail">
+                    <img src="~/Imagens2/carro1.jpg" alt="TESTE">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="/Categoria/Index" class="thumbnail">
+                    <img src="~/Imagens2/carro1.jpg" alt="TESTE">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="/Categoria/Index" class="thumbnail">
+                    <img src="~/Imagens2/carro1.jpg" alt="TESTE">
+                </a>
+            </div>
         </div>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <hr />
-    <div class="container body-content" style="text-align:center">
-        <footer>
-            <p>&copy; @DateTime.Now.Year - FulanoCar Aluguel de Veiculos</p>
-        </footer>
-    </div>
 </body>
 </html>
