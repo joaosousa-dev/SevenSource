@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using TemplateSevenSource3.Dominio;
 using TemplateSevenSource3.Metodos;
 using TemplateSevenSource3AcessoDados;
+using TemplateSevenSource3Dominio;
 
 namespace TemplateSevenSource3.Controllers
 {
@@ -81,6 +82,12 @@ namespace TemplateSevenSource3.Controllers
                 return HttpNotFound();
             }
             return View(categoria);
+        }
+        public ActionResult Lista()
+        {
+            var metodoscategoria = new MetodosBDCATEG();
+            var todascategorias = metodoscategoria.ListarCategoria();
+            return View(todascategorias);
         }
     }
 }

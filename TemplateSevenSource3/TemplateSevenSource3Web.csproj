@@ -151,16 +151,18 @@
     <Content Include="Imagens2\carrofamilia.jpg" />
     <Content Include="Imagens2\carroseg.jpg" />
     <Content Include="Imagens2\carroviajar.jpg" />
+    <Content Include="Imagens2\etios.jpg" />
+    <Content Include="Imagens2\fordka.jfif" />
+    <Content Include="Imagens2\fordkahd.png" />
     <Content Include="Imagens2\Funcionario2.jpg" />
     <Content Include="Imagens2\Funcionariosimg.jpg" />
     <Content Include="Imagens2\images.jfif" />
+    <Content Include="Imagens2\jetta.jpg" />
     <Content Include="Imagens2\KAiTghC.jpg" />
+    <Content Include="Imagens2\onix.jpg" />
     <Content Include="Imagens2\relax_4k.jpg" />
-    <Content Include="Imagens2\sandero-rs.jpg" />
+    <Content Include="Imagens2\sandero.jfif" />
     <Content Include="Imagens2\small-memory-lp.jpg" />
-    <Content Include="Imagens2\thumb-1920-502124.jpg" />
-    <Content Include="Imagens2\voyage.jpg" />
-    <Content Include="Imagens2\índice.jpg" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.pdb" />
     <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css" />
@@ -413,11 +415,17 @@
     <Content Include="Views\Categoria\Detalhes.cshtml" />
     <Content Include="Views\Categoria\Apagar.cshtml" />
     <Content Include="Views\Categoria\Cadastro.cshtml" />
+    <Content Include="Views\Veiculo\Index.cshtml" />
+    <Content Include="Views\Veiculo\Cadastro.cshtml" />
+    <Content Include="Views\Veiculo\Editar.cshtml" />
+    <Content Include="Views\Veiculo\Apagar.cshtml" />
+    <Content Include="Views\Veiculo\Detalhes.cshtml" />
+    <Content Include="Views\Categoria\Lista.cshtml" />
+    <Content Include="Views\Categoria\CarrosCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Veiculo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -15,7 +15,7 @@ namespace TemplateSevenSource3.Metodos
         public void CadastroVeiculo(Veiculo veiculo)
         {
             var strQuery = "";
-            strQuery = string.Format("INSERT INTO VEICULO(MODELO,ANO,PLACA,CAMBIO,STATUS_VEICULO,IDCATEGORIA,IDMARCA) VALUES(UPPER('{0}'),'{1}', UPPER('{2}'), UPPER('{3}'), UPPER('{4}'), '{5},'{6}')",veiculo.Modelo,veiculo.Ano,veiculo.Placa,veiculo.Cambio,veiculo.Status,veiculo.IdCategoria,veiculo.IdMarca);
+            strQuery = string.Format("INSERT INTO VEICULO(MODELO,ANO,PLACA,CAMBIO,STATUS_VEICULO,IDCATEGORIA,IDMARCA) VALUES(UPPER('{0}'),'{1}', UPPER('{2}'), UPPER('{3}'), UPPER('{4}'), {5},{6})",veiculo.Modelo,veiculo.Ano,veiculo.Placa,veiculo.Cambio,veiculo.Status,veiculo.IdCategoria,veiculo.IdMarca);
             banco.ExecutarComando(strQuery);
 
         }
@@ -25,7 +25,7 @@ namespace TemplateSevenSource3.Metodos
             strQuery += string.Format("DELETE FROM VEICULO WHERE IDVEICULO={0}", id);
             banco.ExecutarComando(strQuery);
         }
-        public void AtualizarMarca(Veiculo veiculo)
+        public void AtualizarVeiculo(Veiculo veiculo)
         {
             var strQuery = "";
             strQuery += string.Format("UPDATE VEICULO SET ");
@@ -34,8 +34,8 @@ namespace TemplateSevenSource3.Metodos
             strQuery += string.Format("PLACA=UPPER('{0}'),", veiculo.Placa);
             strQuery += string.Format("CAMBIO=UPPER('{0}'),", veiculo.Cambio);
             strQuery += string.Format("STATUS_VEICULO=UPPER('{0}'),", veiculo.Status);
-            strQuery += string.Format("PLACA={0},", veiculo.IdCategoria);
-            strQuery += string.Format("PLACA={0} ", veiculo.IdMarca);
+            strQuery += string.Format("IDCATEGORIA={0},", veiculo.IdCategoria);
+            strQuery += string.Format("IDMARCA={0} ", veiculo.IdMarca);
             strQuery += string.Format("WHERE IDMARCA={0}", veiculo.Id);
             banco.ExecutarComando(strQuery);
         }
@@ -43,7 +43,7 @@ namespace TemplateSevenSource3.Metodos
         {
             using (banco = new Banco())
             {
-                var strQuery = "SELECT * FROM VEICULO;";
+                var strQuery = "SELECT * FROM VWVEICULO;";
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeVeiculo(retorno);
             };
@@ -62,9 +62,9 @@ namespace TemplateSevenSource3.Metodos
                     Cambio = char.Parse(retorno["CAMBIO"].ToString()),
                     Status = retorno["STATUS_VEICULO"].ToString(),
                     IdCategoria = int.Parse(retorno["IDCATEGORIA"].ToString()),
+                    TipoCategoria = retorno["TIPOCATEGORIA"].ToString(),
                     IdMarca = int.Parse(retorno["IDMARCA"].ToString()),
-                    IdManutencao = int.Parse(retorno["IDMANUTENCAO"].ToString())
-
+                    NomeMarca = retorno["NOMEMARCA"].ToString(),
                 };
                 veiculo.Add(TempVeiculo);
             }
