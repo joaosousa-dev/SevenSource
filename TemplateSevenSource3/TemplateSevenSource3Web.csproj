@@ -415,13 +415,13 @@
     <Content Include="Views\Categoria\Detalhes.cshtml" />
     <Content Include="Views\Categoria\Apagar.cshtml" />
     <Content Include="Views\Categoria\Cadastro.cshtml" />
+    <Content Include="Views\Categoria\Lista.cshtml" />
+    <Content Include="Views\Categoria\CarrosCategoria.cshtml" />
     <Content Include="Views\Veiculo\Index.cshtml" />
     <Content Include="Views\Veiculo\Cadastro.cshtml" />
     <Content Include="Views\Veiculo\Editar.cshtml" />
     <Content Include="Views\Veiculo\Apagar.cshtml" />
     <Content Include="Views\Veiculo\Detalhes.cshtml" />
-    <Content Include="Views\Categoria\Lista.cshtml" />
-    <Content Include="Views\Categoria\CarrosCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

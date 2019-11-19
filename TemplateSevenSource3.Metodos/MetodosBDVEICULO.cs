@@ -15,7 +15,7 @@ namespace TemplateSevenSource3.Metodos
         public void CadastroVeiculo(Veiculo veiculo)
         {
             var strQuery = "";
-            strQuery = string.Format("INSERT INTO VEICULO(MODELO,ANO,PLACA,CAMBIO,STATUS_VEICULO,IDCATEGORIA,IDMARCA) VALUES(UPPER('{0}'),'{1}', UPPER('{2}'), UPPER('{3}'), UPPER('{4}'), {5},{6})",veiculo.Modelo,veiculo.Ano,veiculo.Placa,veiculo.Cambio,veiculo.Status,veiculo.IdCategoria,veiculo.IdMarca);
+            strQuery = string.Format("INSERT INTO VEICULO(MODELO,ANO,PLACA,CAMBIO,STATUS_VEICULO,IDCATEGORIA,IDMARCA,IDMANUTENCAO) VALUES(UPPER('{0}'),'{1}', UPPER('{2}'), UPPER('{3}'), UPPER('{4}'), {5},{6},{7})",veiculo.Modelo,veiculo.Ano,veiculo.Placa,veiculo.Cambio,veiculo.Status,veiculo.IdCategoria,veiculo.IdMarca,veiculo.IdManutencao);
             banco.ExecutarComando(strQuery);
 
         }
@@ -36,7 +36,7 @@ namespace TemplateSevenSource3.Metodos
             strQuery += string.Format("STATUS_VEICULO=UPPER('{0}'),", veiculo.Status);
             strQuery += string.Format("IDCATEGORIA={0},", veiculo.IdCategoria);
             strQuery += string.Format("IDMARCA={0} ", veiculo.IdMarca);
-            strQuery += string.Format("WHERE IDMARCA={0}", veiculo.Id);
+            strQuery += string.Format("WHERE IDVEICULO={0}", veiculo.Id);
             banco.ExecutarComando(strQuery);
         }
         public List<Veiculo> ListarVeiculo()
@@ -62,8 +62,11 @@ namespace TemplateSevenSource3.Metodos
                     Cambio = char.Parse(retorno["CAMBIO"].ToString()),
                     Status = retorno["STATUS_VEICULO"].ToString(),
                     TipoCategoria = retorno["TIPOCATEGORIA"].ToString(),
-                    IdMarca = int.Parse(retorno["IDMARCA"].ToString()),
                     NomeMarca = retorno["NOMEMARCA"].ToString(),
+                    DsManutencao = retorno["DSMANUTENCAO"].ToString(),
+                    IdCategoria = int.Parse(retorno["IDCATEGORIA"].ToString()),
+                    IdMarca = int.Parse(retorno["IDMARCA"].ToString()),
+                    IdManutencao = int.Parse(retorno["IDMANUTENCAO"].ToString())
                 };
                 veiculo.Add(TempVeiculo);
             }
@@ -75,7 +78,7 @@ namespace TemplateSevenSource3.Metodos
             using (banco = new Banco())
             {
                 // var strQuery = string.Format("SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE where T.CPFCLIENTE={0}", cpf);
-                var strQuery = string.Format("SELECT * FROM VEICULO where IDVEICULO={0}", id);
+                var strQuery = string.Format("SELECT * FROM VWVEICULO where IDVEICULO={0}", id);
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeVeiculo(retorno).FirstOrDefault();
             }

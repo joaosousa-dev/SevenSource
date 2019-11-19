@@ -1,0 +1,90 @@
+﻿@model TemplateSevenSource3Dominio.Veiculo
+
+@{
+    ViewBag.Title = "Apagar veículo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apagar</h2>
+
+<h3>Você deseja realmente apagar?</h3>
+<div>
+    <h4>Veiculo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cambio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cambio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeMarca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeMarca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DsManutencao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DsManutencao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Apagar" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar aos veículos", "Index")
+        </div>
+    }
+</div>
