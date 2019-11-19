@@ -61,7 +61,6 @@ namespace TemplateSevenSource3.Metodos
                     Placa = retorno["PLACA"].ToString(),
                     Cambio = char.Parse(retorno["CAMBIO"].ToString()),
                     Status = retorno["STATUS_VEICULO"].ToString(),
-                    IdCategoria = int.Parse(retorno["IDCATEGORIA"].ToString()),
                     TipoCategoria = retorno["TIPOCATEGORIA"].ToString(),
                     IdMarca = int.Parse(retorno["IDMARCA"].ToString()),
                     NomeMarca = retorno["NOMEMARCA"].ToString(),
