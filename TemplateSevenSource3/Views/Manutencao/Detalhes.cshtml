@@ -1,0 +1,27 @@
+﻿@model TemplateSevenSource3.Dominio.Manutencao
+
+@{
+    ViewBag.Title = "Detalhes da manutenção";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes da manutenção</h2>
+
+<div>
+    <h4>Manutencao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Voltas às manutenções", "Index")
+</p>

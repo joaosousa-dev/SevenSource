@@ -9,7 +9,7 @@ namespace TemplateSevenSource3.Dominio
 {
     public class Manutencao
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         [DataType(DataType.MultilineText)]
         public string Descricao { get; set; }
     }

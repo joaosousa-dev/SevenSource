@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="MetodosBDCATEG.cs" />
     <Compile Include="metodosBDCLI.cs" />
+    <Compile Include="MetodosBDMANUT.cs" />
     <Compile Include="MetodosBDMARCA.cs" />
     <Compile Include="MetodosBDVEICULO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

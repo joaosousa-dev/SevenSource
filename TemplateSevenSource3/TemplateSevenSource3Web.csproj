@@ -124,6 +124,7 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManutencaoController.cs" />
     <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\VeiculoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -425,6 +426,11 @@
     <Content Include="Views\Veiculo\Apagar.cshtml" />
     <Content Include="Views\Veiculo\Detalhes.cshtml" />
     <Content Include="Views\Veiculo\Lista.cshtml" />
+    <Content Include="Views\Manutencao\Index.cshtml" />
+    <Content Include="Views\Manutencao\Cadastro.cshtml" />
+    <Content Include="Views\Manutencao\Editar.cshtml" />
+    <Content Include="Views\Manutencao\Apagar.cshtml" />
+    <Content Include="Views\Manutencao\Detalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

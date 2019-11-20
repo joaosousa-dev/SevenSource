@@ -1,0 +1,33 @@
+﻿@model TemplateSevenSource3.Dominio.Manutencao
+
+@{
+    ViewBag.Title = "Apagar manutenção";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Apagar manutenção</h2>
+
+<h3>Você deseja realmente apagar?</h3>
+<div>
+    <h4>Manutencao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Apagar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar às manutenções", "Index")
+        </div>
+    }
+</div>
