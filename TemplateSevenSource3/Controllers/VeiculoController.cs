@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,15 +18,26 @@ namespace TemplateSevenSource3.Controllers
             var todosveiculos=metodosbdveiculo.ListarVeiculo();
             return View(todosveiculos);
         }
+        public ActionResult Lista()
+        {
+            var metodosbdveiculo = new MetodosBDVEICULO();
+            var todosveiculos = metodosbdveiculo.ListarVeiculo();
+            return View(todosveiculos);
+        }
         public ActionResult Cadastro()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Cadastro(Veiculo veiculo)
+        public ActionResult Cadastro(Veiculo veiculo,HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                if(file.FileName != null)
+                {
+                    //string caminho = @"\\Content\\CarrosImg\\" + file.FileName.ToString();
+                    veiculo.fotopath = file.FileName;
+                }
                 var metodosveiculo = new MetodosBDVEICULO();
                 metodosveiculo.CadastroVeiculo(veiculo);
                 return RedirectToAction("Index");

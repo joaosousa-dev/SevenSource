@@ -137,6 +137,8 @@
   <ItemGroup>
     <Content Include="bin\TemplateSevenSource3.dll" />
     <Content Include="bin\TemplateSevenSource3.pdb" />
+    <Content Include="Content\CarrosImg\jetta.jfif" />
+    <Content Include="Content\CarrosImg\jetta3.jpeg" />
     <Content Include="Imagens2\carro1.jpg" />
     <Content Include="Imagens2\carro2.jpeg" />
     <Content Include="Imagens2\carro3.jpg" />
@@ -422,6 +424,7 @@
     <Content Include="Views\Veiculo\Editar.cshtml" />
     <Content Include="Views\Veiculo\Apagar.cshtml" />
     <Content Include="Views\Veiculo\Detalhes.cshtml" />
+    <Content Include="Views\Veiculo\Lista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

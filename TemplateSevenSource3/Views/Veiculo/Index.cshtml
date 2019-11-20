@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Veículos cadastrados</h2>
 
 <p>
     @Html.ActionLink("Cadastrar novo veículo", "Cadastro")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Id)
@@ -39,48 +39,64 @@
         <th>
             @Html.DisplayNameFor(model => model.DsManutencao)
         </th>
-       
+        <th>
+            @Html.DisplayNameFor(model => model.fotopath)
+
+        </th>
+
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoCategoria)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Placa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cambio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ano)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Modelo)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeMarca)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-     
-        <td>
-            @Html.DisplayFor(modelItem => item.DsManutencao)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
-            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.Id }) |
-            @Html.ActionLink("Apagar", "Apagar", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cambio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DsManutencao)
+            </td>
+            <td>
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="@Url.Content("~/Content/CarrosImg/"+@item.fotopath)" alt="Image">
+                        </a>
+                    </div>
+                </div>
+            </td>
+
+
+            <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = item.Id }, new { @class = "btn btn-warning" }) <br /><br />
+                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }, new { @class = "btn btn-info" }) <br /><br />
+                    @Html.ActionLink("Apagar", "Apagar", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
 
 </table>

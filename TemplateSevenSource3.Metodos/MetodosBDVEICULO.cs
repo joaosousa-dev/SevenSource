@@ -15,7 +15,7 @@ namespace TemplateSevenSource3.Metodos
         public void CadastroVeiculo(Veiculo veiculo)
         {
             var strQuery = "";
-            strQuery = string.Format("INSERT INTO VEICULO(MODELO,ANO,PLACA,CAMBIO,STATUS_VEICULO,IDCATEGORIA,IDMARCA,IDMANUTENCAO) VALUES(UPPER('{0}'),'{1}', UPPER('{2}'), UPPER('{3}'), UPPER('{4}'), {5},{6},{7})",veiculo.Modelo,veiculo.Ano,veiculo.Placa,veiculo.Cambio,veiculo.Status,veiculo.IdCategoria,veiculo.IdMarca,veiculo.IdManutencao);
+            strQuery = string.Format("INSERT INTO VEICULO(MODELO,ANO,PLACA,CAMBIO,STATUS_VEICULO,IDCATEGORIA,IDMARCA,IDMANUTENCAO,FOTO) VALUES(UPPER('{0}'),'{1}', UPPER('{2}'), UPPER('{3}'), UPPER('{4}'), {5},{6},{7},'{8}')", veiculo.Modelo, veiculo.Ano, veiculo.Placa, veiculo.Cambio, veiculo.Status, veiculo.IdCategoria, veiculo.IdMarca, veiculo.IdManutencao,veiculo.fotopath);
             banco.ExecutarComando(strQuery);
 
         }
@@ -66,7 +66,8 @@ namespace TemplateSevenSource3.Metodos
                     DsManutencao = retorno["DSMANUTENCAO"].ToString(),
                     IdCategoria = int.Parse(retorno["IDCATEGORIA"].ToString()),
                     IdMarca = int.Parse(retorno["IDMARCA"].ToString()),
-                    IdManutencao = int.Parse(retorno["IDMANUTENCAO"].ToString())
+                    IdManutencao = int.Parse(retorno["IDMANUTENCAO"].ToString()),
+                    fotopath = retorno["FOTO"].ToString()
                 };
                 veiculo.Add(TempVeiculo);
             }
