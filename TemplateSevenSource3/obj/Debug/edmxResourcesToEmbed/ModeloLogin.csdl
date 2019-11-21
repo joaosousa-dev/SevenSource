@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LOCADORASEVENCARModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CARGO">
+    <Key>
+      <PropertyRef Name="IDCARGO" />
+    </Key>
+    <Property Name="IDCARGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NIVEL" Type="Decimal" Precision="1" Scale="0" />
+    <NavigationProperty Name="FUNCIONARIO" Relationship="Self.FK__FUNCIONAR__IDCAR__145C0A3F" FromRole="CARGO" ToRole="FUNCIONARIO" />
+  </EntityType>
+  <EntityType Name="FUNCIONARIO">
+    <Key>
+      <PropertyRef Name="IDFUN" />
+    </Key>
+    <Property Name="IDFUN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LOGINFUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SENHAFUN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMEFUN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CPFFUN" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDCARGO" Type="Int32" />
+    <NavigationProperty Name="CARGO" Relationship="Self.FK__FUNCIONAR__IDCAR__145C0A3F" FromRole="FUNCIONARIO" ToRole="CARGO" />
+  </EntityType>
+  <Association Name="FK__FUNCIONAR__IDCAR__145C0A3F">
+    <End Role="CARGO" Type="Self.CARGO" Multiplicity="0..1" />
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARGO">
+        <PropertyRef Name="IDCARGO" />
+      </Principal>
+      <Dependent Role="FUNCIONARIO">
+        <PropertyRef Name="IDCARGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CARGO" EntityType="Self.CARGO" />
+    <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" />
+    <AssociationSet Name="FK__FUNCIONAR__IDCAR__145C0A3F" Association="Self.FK__FUNCIONAR__IDCAR__145C0A3F">
+      <End Role="CARGO" EntitySet="CARGO" />
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -12,12 +12,6 @@ namespace TemplateSevenSource3.Controllers
         {
             return View();
         }
-
-        public ActionResult Login()
-        {
-            return View();
-        }
-
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

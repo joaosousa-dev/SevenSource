@@ -1,0 +1,57 @@
+﻿@model TemplateSevenSource3.FUNCIONARIO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(a => a.LOGINFUN)
+                </td>
+                <td>
+                    @Html.TextBoxFor(a => a.LOGINFUN)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(a => a.LOGINFUN)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(a => a.SENHAFUN)
+                </td>
+                <td>
+                    @Html.PasswordFor(a => a.SENHAFUN)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(a => a.SENHAFUN)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            <td>
+                <input type="submit" value="login"/>
+            </td>
+            </tr>
+        </table>
+        }
+    </div>
+</body>
+</html>
+
+@section Scripts{
+@Scripts.Render("~/bundles/jqueryval")
+}

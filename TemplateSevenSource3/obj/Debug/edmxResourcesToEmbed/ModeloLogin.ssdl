@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LOCADORASEVENCARModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CARGO">
+    <Key>
+      <PropertyRef Name="IDCARGO" />
+    </Key>
+    <Property Name="IDCARGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NIVEL" Type="numeric" Precision="1" Scale="0" />
+  </EntityType>
+  <EntityType Name="FUNCIONARIO">
+    <Key>
+      <PropertyRef Name="IDFUN" />
+    </Key>
+    <Property Name="IDFUN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOGINFUN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SENHAFUN" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NOMEFUN" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CPFFUN" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="IDCARGO" Type="int" />
+  </EntityType>
+  <Association Name="FK__FUNCIONAR__IDCAR__145C0A3F">
+    <End Role="CARGO" Type="Self.CARGO" Multiplicity="0..1" />
+    <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARGO">
+        <PropertyRef Name="IDCARGO" />
+      </Principal>
+      <Dependent Role="FUNCIONARIO">
+        <PropertyRef Name="IDCARGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LOCADORASEVENCARModelStoreContainer">
+    <EntitySet Name="CARGO" EntityType="Self.CARGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__FUNCIONAR__IDCAR__145C0A3F" Association="Self.FK__FUNCIONAR__IDCAR__145C0A3F">
+      <End Role="CARGO" EntitySet="CARGO" />
+      <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

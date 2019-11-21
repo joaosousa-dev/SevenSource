@@ -10,11 +10,7 @@ namespace TemplateSevenSource3.Controllers
     public class FuncionarioController : Controller
     {
         // GET: Funcionario
-        public ActionResult Login()
-        {
-            return View();
-        }
-        public ActionResult Dashboard()
+        public ActionResult Menu()
         {
             return View();
         }

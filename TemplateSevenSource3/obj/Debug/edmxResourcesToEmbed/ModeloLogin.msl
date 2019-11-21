@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LOCADORASEVENCARModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CARGO">
+      <EntityTypeMapping TypeName="LOCADORASEVENCARModel.CARGO">
+        <MappingFragment StoreEntitySet="CARGO">
+          <ScalarProperty Name="IDCARGO" ColumnName="IDCARGO" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONARIO">
+      <EntityTypeMapping TypeName="LOCADORASEVENCARModel.FUNCIONARIO">
+        <MappingFragment StoreEntitySet="FUNCIONARIO">
+          <ScalarProperty Name="IDFUN" ColumnName="IDFUN" />
+          <ScalarProperty Name="LOGINFUN" ColumnName="LOGINFUN" />
+          <ScalarProperty Name="SENHAFUN" ColumnName="SENHAFUN" />
+          <ScalarProperty Name="NOMEFUN" ColumnName="NOMEFUN" />
+          <ScalarProperty Name="CPFFUN" ColumnName="CPFFUN" />
+          <ScalarProperty Name="IDCARGO" ColumnName="IDCARGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
