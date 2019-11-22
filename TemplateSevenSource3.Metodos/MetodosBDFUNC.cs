@@ -52,7 +52,7 @@ namespace TemplateSevenSource3.Metodos
         public void DeletarFUNC(int id)
         {
             var strQuery = "";
-            strQuery += string.Format("DELETE FROM FUNCIONARIO WHERE IDFUNCIONARIO={0}", id);
+            strQuery += string.Format("DELETE FROM FUNCIONARIO WHERE IDFUN={0}", id);
             banco.ExecutarComando(strQuery);
         }
         public void AtualizarFUNC(Funcionario funcionario)
@@ -97,7 +97,7 @@ namespace TemplateSevenSource3.Metodos
         {
             using (banco = new Banco())
             {
-                var strQuery = string.Format("SELECT * FROM VWFUNCIONARIO where IDFUNCIONARIO={0}", id);
+                var strQuery = string.Format("SELECT * FROM VWFUNCIONARIO where IDFUN={0}", id);
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeFUNC(retorno).FirstOrDefault();
             }

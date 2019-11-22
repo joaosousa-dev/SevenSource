@@ -81,6 +81,10 @@ namespace TemplateSevenSource3.Controllers
             }
             return View(funcionario);
         }
+        public ActionResult Menu()
+        {
+            return View();
+        }
     }
     
 }
