@@ -4,21 +4,21 @@
     ViewBag.Title = "Veículos";
     Layout = "~/Views/Shared/_LayoutIndex.cshtml";
 }
+<body class="container">
+    <h2>Veículos</h2>
+    @foreach (var item in Model)
+    {
 
-<h2>Veículos</h2>
-@foreach (var item in Model)
-{
+        <div class="card-body thumbnail" style="display:inline-block">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top img-thumbnail img-responsive" src="@Url.Content("~/Content/CarrosImg/" + @item.fotopath)" alt="Imagem">
 
-    <div class="card-body thumbnail" style="display:inline-block">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top img-thumbnail img-responsive" src="@Url.Content("~/Content/CarrosImg/" + @item.fotopath)" alt="Imagem">
-            
                 <h4 class="card-title text-center">@Html.DisplayFor(modelItem => item.Modelo)</h4>
                 <p class="card-text text-center text-info">@Html.DisplayFor(modelItem => item.Ano) | @Html.DisplayFor(modelItem => item.TipoCategoria)</p>
                 <div class="text-center">@Html.ActionLink("Ver detalhes", "Detalhes", new { id = item.Id }, new { @class = "btn btn-success" })</div>
-           
+
+            </div>
         </div>
-    </div>
-}
+    }
 
-
+</body>

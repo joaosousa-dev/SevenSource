@@ -167,6 +167,7 @@
     <Content Include="Imagens2\relax_4k.jpg" />
     <Content Include="Imagens2\sandero.jfif" />
     <Content Include="Imagens2\small-memory-lp.jpg" />
+    <Content Include="Imagens2\wallpaper4.jfif" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.pdb" />
     <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css" />
@@ -418,8 +419,6 @@
     <Content Include="Views\Categoria\Detalhes.cshtml" />
     <Content Include="Views\Categoria\Apagar.cshtml" />
     <Content Include="Views\Categoria\Cadastro.cshtml" />
-    <Content Include="Views\Categoria\Lista.cshtml" />
-    <Content Include="Views\Categoria\CarrosCategoria.cshtml" />
     <Content Include="Views\Veiculo\Index.cshtml" />
     <Content Include="Views\Veiculo\Cadastro.cshtml" />
     <Content Include="Views\Veiculo\Editar.cshtml" />
@@ -433,6 +432,7 @@
     <Content Include="Views\Manutencao\Detalhes.cshtml" />
     <Content Include="Views\Funcionario\Menu.cshtml" />
     <Content Include="Views\Login\Entrar.cshtml" />
+    <Content Include="Views\Home\Contato.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

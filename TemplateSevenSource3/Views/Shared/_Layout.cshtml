@@ -66,7 +66,7 @@
             }
         </div>
     </div>
-    <div class="container body-content" style="margin-left:20px;margin-right:20px">
+    <div class="container jumbotron" style="margin-top:5%; text-align:justify">
         @if (Session["usuarioLogado"] != null || HttpContext.Current.Request.AppRelativeCurrentExecutionFilePath.Contains("Login"))
         {
             @RenderBody()
@@ -76,7 +76,7 @@
             Context.Response.Redirect("/Login/Entrar");
         }
         <hr />
-        <div class="container body-content" style="text-align:center">
+        <div class="container" style="text-align:center">
             <footer>
                 <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos</p>
             </footer>

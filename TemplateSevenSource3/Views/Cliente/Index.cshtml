@@ -4,53 +4,54 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div style="margin-right:auto; margin-left:auto;">
-    <h2 class="text-center">Clientes Cadastrados</h2>
+<body class="container">
+    <div style="margin-right:auto; margin-left:auto;">
+        <h2 class="text-center">Clientes Cadastrados</h2>
 
-    <p>
-        @Html.ActionLink("Novo Cliente", "Cadastro")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cnh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cpf)
-            </th>
-
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+        <p>
+            @Html.ActionLink("Novo Cliente", "Cadastro")
+        </p>
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cnh)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cpf)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf }) |
-                    @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf }) |
-                    @Html.ActionLink("Apagar", "Apagar", new { cpf = item.Cpf })
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cnh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+
+                <th></th>
             </tr>
-        }
 
-    </table>
-</div>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cnh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cpf)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf }) |
+                        @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf }) |
+                        @Html.ActionLink("Apagar", "Apagar", new { cpf = item.Cpf })
+                    </td>
+                </tr>
+            }
 
+        </table>
+    </div>
+</body>

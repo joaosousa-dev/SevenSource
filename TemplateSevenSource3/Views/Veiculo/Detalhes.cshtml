@@ -5,116 +5,118 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
+<body class="container">
+    <h2>Detalhes do Veículo</h2>
 
-<h2>Detalhes do Veículo</h2>
+    <div>
+        <h4>Veiculo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </dt>
 
-<div>
-    <h4>Veiculo</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Modelo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Modelo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdCategoria)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Modelo)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IdCategoria)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IdCategoria)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IdCategoria)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoCategoria)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoCategoria)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TipoCategoria)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TipoCategoria)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Placa)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Placa)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Placa)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Placa)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cambio)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cambio)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cambio)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cambio)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Ano)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ano)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Ano)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.fotopath)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ano)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.fotopath)
-        </dt>
-
-        <dd>
-            <div class="row">
-            <div class="col-xs-6 col-md-3">
-                <div class="thumbnail">
-                    <img src="@Url.Content("~/Content/CarrosImg/"+Model.fotopath)" alt="Image">
+            <dd>
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="@Url.Content("~/Content/CarrosImg/"+Model.fotopath)" alt="Image">
+                        </div>
+                    </div>
                 </div>
-            </div>
-</div>            </dd>
+            </dd>
 
 
 
-<dt>
-    @Html.DisplayNameFor(model => model.IdMarca)
-</dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdMarca)
+            </dt>
 
-<dd>
-    @Html.DisplayFor(model => model.IdMarca)
-</dd>
+            <dd>
+                @Html.DisplayFor(model => model.IdMarca)
+            </dd>
 
-<dt>
-    @Html.DisplayNameFor(model => model.NomeMarca)
-</dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.NomeMarca)
+            </dt>
 
-<dd>
-    @Html.DisplayFor(model => model.NomeMarca)
-</dd>
+            <dd>
+                @Html.DisplayFor(model => model.NomeMarca)
+            </dd>
 
-<dt>
-    @Html.DisplayNameFor(model => model.Status)
-</dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
 
-<dd>
-    @Html.DisplayFor(model => model.Status)
-</dd>
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
 
-<dt>
-    @Html.DisplayNameFor(model => model.IdManutencao)
-</dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdManutencao)
+            </dt>
 
-<dd>
-    @Html.DisplayFor(model => model.IdManutencao)
-</dd>
+            <dd>
+                @Html.DisplayFor(model => model.IdManutencao)
+            </dd>
 
-<dt>
-    @Html.DisplayNameFor(model => model.DsManutencao)
-</dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.DsManutencao)
+            </dt>
 
-<dd>
-    @Html.DisplayFor(model => model.DsManutencao)
-</dd>
+            <dd>
+                @Html.DisplayFor(model => model.DsManutencao)
+            </dd>
         </dl>
     </div>
-<p>
-    @Html.ActionLink("Editar", "Editar", new { id = Model.Id }, new { @class = "btn btn-warning" }) |
-    @Html.ActionLink("Voltar aos veículos", "Index")
-</p>
+    <p>
+        @Html.ActionLink("Editar", "Editar", new { id = Model.Id }, new { @class = "btn btn-warning" }) |
+        @Html.ActionLink("Voltar aos veículos", "Index")
+    </p>
+</body>

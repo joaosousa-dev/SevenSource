@@ -82,3 +82,17 @@ D:\Users\Celso\Desktop\joao\####SGLV 7source\bckp\TemplateSevenSource3.Dominio\o
 D:\Users\Celso\Desktop\joao\####SGLV 7source\bckp\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3Dominio.csproj.CopyComplete
 D:\Users\Celso\Desktop\joao\####SGLV 7source\bckp\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3.Dominio.dll
 D:\Users\Celso\Desktop\joao\####SGLV 7source\bckp\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3.Dominio.pdb
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.Helpers.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.Mvc.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.Razor.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.WebPages.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.Helpers.xml
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.Mvc.xml
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.Razor.xml
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.WebPages.xml
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\2binfo\Desktop\SevenSource\TemplateSevenSource3.Dominio\obj\Debug\TemplateSevenSource3Dominio.csproj.CopyComplete

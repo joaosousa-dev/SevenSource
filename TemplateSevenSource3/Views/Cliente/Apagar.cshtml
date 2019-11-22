@@ -3,118 +3,120 @@
 @{
     ViewBag.Title = "Apagar";
 }
+<body class="container">
+    <h2>Apagar</h2>
 
-<h2>Apagar</h2>
+    <h3>Você deseja realmente apagar?</h3>
+    <div>
+        <h4>Cliente</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
 
-<h3>Você deseja realmente apagar?</h3>
-<div>
-    <h4>Cliente</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cnh)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cnh)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cnh)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cnh)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cpf)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cpf)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cpf)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TelMovel)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TelMovel)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TelMovel)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TelMovel)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TelFixo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TelFixo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TelFixo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TelFixo)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Rua)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rua)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Rua)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Rua)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Numero)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Numero)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Numero)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Numero)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cidade)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Bairro)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Bairro)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bairro)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Estado)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cep)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cep)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Cep)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cep)
-        </dd>
+        </dl>
 
-    </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar à lista", "Index")
-        </div>
-    }
-</div>
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Voltar à lista", "Index")
+            </div>
+        }
+    </div>
+</body>

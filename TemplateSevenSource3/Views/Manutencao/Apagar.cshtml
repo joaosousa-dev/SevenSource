@@ -4,30 +4,32 @@
     ViewBag.Title = "Apagar manutenção";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<body class="container">
+    <h2>Apagar manutenção</h2>
 
-<h2>Apagar manutenção</h2>
+    <h3>Você deseja realmente apagar?</h3>
+    <div>
+        <h4>Manutencao</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
 
-<h3>Você deseja realmente apagar?</h3>
-<div>
-    <h4>Manutencao</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
+        </dl>
 
-    </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Apagar" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar às manutenções", "Index")
-        </div>
-    }
-</div>
+            <div class="form-actions no-color">
+                <input type="submit" value="Apagar" class="btn btn-default" /> |
+                @Html.ActionLink("Voltar às manutenções", "Index")
+            </div>
+        }
+    </div>
+</body>

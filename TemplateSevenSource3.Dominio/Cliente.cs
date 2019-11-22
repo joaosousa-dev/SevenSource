@@ -15,9 +15,10 @@ namespace TemplateSevenSource3Dominio
         [RegularExpression(@"^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*\s+<(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})>$|^(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})$", ErrorMessage = "Digite um Email válido")]
         public string Email { get; set; }
         [DisplayName("CNH")]
+        [Required(ErrorMessage = "A CNH é obrigatório")]
         public string Cnh { get; set; }
         [DisplayName("CPF")]
-        [Required(ErrorMessage = "O CPF é obrigatório")]
+        [Required(ErrorMessage = "\n\n\n\n\n\n\n\n\n\n\n\nO CPF é obrigatório")]
         [RegularExpression(@"[1-9]{11,11}", ErrorMessage = "CPF 11 Dígitos")]
         public long Cpf { get; set; }
         [DisplayName("Telefone Móvel")]
@@ -26,7 +27,7 @@ namespace TemplateSevenSource3Dominio
         public string TelFixo { get; set; }
         [DisplayName("Rua")]
         public string Rua { get; set; }
-        [DisplayName("Número")]
+        [DisplayName("N.º")]
         public string Numero { get; set; }
         [DisplayName("Cidade")]
         public string Cidade { get; set; }
