@@ -21,7 +21,7 @@ namespace TemplateSevenSource3.Controllers
         public ActionResult Entrar(Funcionario funcionario)
         {
 
-            metodo.TestarUsuario(funcionario);
+            funcionario=metodo.TestarUsuario(funcionario);
 
             // foi devolvido um resultado do banco, caso as informaççoes
             // do banco forem diferentes de nula, ou seja se foram
@@ -31,7 +31,7 @@ namespace TemplateSevenSource3.Controllers
                 FormsAuthentication.SetAuthCookie(funcionario.Login, false);
                 Session["usuarioLogado"] = funcionario.Login.ToString();
                 Session["senhaLogado"] = funcionario.Senha.ToString();
-
+                Session["nomeCargo"] = funcionario.NomeCargo.ToString(); ;
                 //direcionando o usuario para pagina Index da home
                 return RedirectToAction("Menu", "Funcionario");
             }

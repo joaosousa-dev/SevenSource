@@ -24,8 +24,9 @@ namespace TemplateSevenSource3Dominio
         public string ConfirmarSenha { get; set; }
         [DisplayName("CPF")]
         public int Cpf { get; set; }
-        [DisplayName("Cargo")]
+        [DisplayName("ID Cargo")]
         public int IdCargo { get; set; }
-        public int Nivel { get; set; }
+        public int NivelCargo { get; set; }
+        public string NomeCargo { get; set; }
     }
 }

@@ -433,6 +433,10 @@
     <Content Include="Views\Funcionario\Menu.cshtml" />
     <Content Include="Views\Login\Entrar.cshtml" />
     <Content Include="Views\Home\Contato.cshtml" />
+    <Content Include="Views\Funcionario\Index.cshtml" />
+    <Content Include="Views\Funcionario\Cadastro.cshtml" />
+    <Content Include="Views\Funcionario\Editar.cshtml" />
+    <Content Include="Views\Funcionario\Apagar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

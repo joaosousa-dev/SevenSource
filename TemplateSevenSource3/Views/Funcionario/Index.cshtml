@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TemplateSevenSource3Dominio.Funcionario>
+
+@{
+    ViewBag.Title = "Quadro de funcionários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar novo funcionário", "Cadastro")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCargo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Login)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cpf)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdCargo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NomeCargo)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+        @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
+        @Html.ActionLink("Apagar", "Apagar", new { id = item.Id })
+    </td>
+</tr>
+}
+
+</table>
