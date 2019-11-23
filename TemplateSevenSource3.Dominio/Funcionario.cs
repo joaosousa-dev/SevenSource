@@ -10,10 +10,10 @@ namespace TemplateSevenSource3Dominio
     public class Funcionario
     {
         public int Id { get; set; }
-        [RegularExpression(@"[a-zA-Z1-9]{3,15}", ErrorMessage = "Apenas letras e números mínimo 3 caracteres")]
+        [RegularExpression(@"[a-zA-Z0-9]{3,15}", ErrorMessage = "Apenas letras e números mínimo 3 caracteres")]
         [DisplayName("Login")]
         public string Login { get; set; }
-        [RegularExpression(@"[a-zA-Z]{3,50}", ErrorMessage = "Apenas letras para nomes,mínimo 3 caracteres")]
+        [RegularExpression(@"[a-z A-Z]{3,50}", ErrorMessage = "Apenas letras para nomes,mínimo 3 caracteres")]
         [DisplayName("Nome")]
         public string Nome { get; set; }
         [DisplayName("Senha")]
@@ -23,7 +23,7 @@ namespace TemplateSevenSource3Dominio
         [DisplayName("Confirmar senha")]
         public string ConfirmarSenha { get; set; }
         [DisplayName("CPF")]
-        public int Cpf { get; set; }
+        public string Cpf { get; set; }
         [DisplayName("ID Cargo")]
         public int IdCargo { get; set; }
         public int NivelCargo { get; set; }

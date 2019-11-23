@@ -19,14 +19,7 @@
     @Scripts.Render("~/bundles/jqueryval")
 
 
-<body style="        width: 100%;
-        height: 100%;
-        margin: auto;
-        text-align: center;
-        position: absolute;
-        background-image: url('../../Imagens2/wallpaper4.jfif');
-        background-repeat: no-repeat;
-        background-size: 100%" class="container">
+<body style="width: 100%; height: 100%; text-align: center; background-size:auto; background-repeat:no-repeat; background-image:linear-gradient(to bottom, rgba(86, 72, 72, 0.76), rgba(16, 10, 10, 0.88));">
     @using (Html.BeginForm("Entrar", "Login", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
@@ -35,6 +28,7 @@
             <div>
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
+                    <img src="~/Imagens2/dunlexlogo.png" class="img-responsive" /><br />
 
                     <div style="width:100%">
                         @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control", placeholder = "Login" } })
@@ -51,7 +45,7 @@
                         <br /><br />
                     </div>
                 </div>
-               
+
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
                         <input type="submit" value="Entrar" class="btn btn-primary" />
@@ -64,7 +58,7 @@
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
     }
-    <footer>
-        <p>&copy; @DateTime.Now.Year - DanlexCar Aluguel de Veiculos</p>
-    </footer>
+    <br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
+</html>

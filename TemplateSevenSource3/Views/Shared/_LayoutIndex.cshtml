@@ -7,8 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+<body style="background-color:rgba(46, 48, 61, 0.2)">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">DunlexCar</a>
+                <a class="navbar-brand" href="#"><img src="~/Imagens2/dunlexlogo.png" width="110" height="35" style="margin-top:-5%"/></a>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
@@ -31,7 +31,7 @@
 
                 </ul>
 
-                <form class="navbar-form navbar-right" method="post">
+                <form class="navbar-form navbar-right" method="post" style="float: right">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Procurar">
                     </div>
@@ -43,12 +43,71 @@
             <!--/.navbar-collapse -->
         </div>
     </nav>
-    <div class="container body-content" style="margin-left:20px;margin-right:20px">
+    <div class="container body-content">
         @RenderBody()
-        <hr />
-        <div class="container body-content" style="text-align:center">
-            <footer>
-                <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos</p>
+        <div>
+            <footer id="footer" class="footer-1" style="">
+                <div class="main-footer widgets-dark typo-light">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <div class="widget subscribe no-box">
+                                    <h4 class="widget-title">DunlexCar<span></span></h4>
+                                    <p>Somos uma empresa nacional com mais de 5 anos de mercado que tenta oferecer o menor preço em toda região do Brasil.</p>
+                                    <p>Nossa frota conta com mais de 100 veiculos a sua disponibilidade.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <div class="widget no-box">
+                                    <h4 class="widget-title">Links Rápidos<span></span></h4>
+                                    <ul class="thumbnail-widget">
+                                        <li>
+                                            <div class="thumb-content">@Html.ActionLink("Veículos", "Lista", "Veiculo")</div>
+                                        </li>
+                                        <li>
+                                            <div class="thumb-content">@Html.ActionLink("Categorias", "Lista", "Categoria")</div>
+                                        </li>
+                                        <li>
+                                            <div class="thumb-content">@Html.ActionLink("Marcas", "Lista", "Marca")</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <div class="widget no-box">
+                                    <h4 class="widget-title">Sede Administrativa<span></span></h4>
+                                    <p>Endereço: Rua Benedito Calixto, 358</p>
+                                    <p>Pinheiros - São Paulo-SP</p>
+                                    <p>CEP:05406-040</p>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+
+                                <div class="widget no-box">
+                                    <h4 class="widget-title">Contate-nos<span></span></h4>
+
+                                    <p><a href="mailto:dunlexcar@contato.com.br" title="glorythemes">dunlexcar@contato.com.br</a></p>
+                                    <p>(11) 3695-2487 / (11) 95656-8486</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos. Todos os direitos reservados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </footer>
         </div>
     </div>

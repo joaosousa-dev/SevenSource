@@ -83,8 +83,10 @@ namespace TemplateSevenSource3.Metodos
                 var TempFuncionario = new Funcionario()
                 {
                     Id = int.Parse(retorno["IDFUN"].ToString()),
+                    Login = retorno["LOGINFUN"].ToString(),
                     Nome = retorno["NOMEFUN"].ToString(),
                     IdCargo = int.Parse(retorno["IDCARGO"].ToString()),
+                    Cpf= retorno["CPFFUN"].ToString(),
                     NivelCargo = int.Parse(retorno["NIVELCARGO"].ToString()),
                     NomeCargo = retorno["NOMECARGO"].ToString(),
                 };

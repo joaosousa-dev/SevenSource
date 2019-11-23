@@ -66,7 +66,7 @@
             }
         </div>
     </div>
-    <div class="container jumbotron" style="margin-top:5%; text-align:justify">
+    <div class="container jumbotron" style="margin-top:5%; text-align:justify;">
         @if (Session["usuarioLogado"] != null || HttpContext.Current.Request.AppRelativeCurrentExecutionFilePath.Contains("Login"))
         {
             @RenderBody()
@@ -76,13 +76,14 @@
             Context.Response.Redirect("/Login/Entrar");
         }
         <hr />
-        <div class="container" style="text-align:center">
-            <footer>
-                <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos</p>
-            </footer>
-        </div>
-    </div>
 
+        
+    </div>
+    <div>
+        <footer class="container panel-footer">
+            <p>&copy; @DateTime.Now.Year - DunlexCar Aluguel de Veiculos</p>
+        </footer>
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
