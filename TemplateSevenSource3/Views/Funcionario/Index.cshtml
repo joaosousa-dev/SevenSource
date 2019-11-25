@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <body class="container">
-    <h2>Index</h2>
+    <h2>Quadro de funcionários</h2>
 
     <p>
         @Html.ActionLink("Cadastrar novo funcionário", "Cadastro")
     </p>
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Login)
@@ -49,9 +49,9 @@
                     @Html.DisplayFor(modelItem => item.NomeCargo)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
-                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
-                    @Html.ActionLink("Apagar", "Apagar", new { id = item.Id })
+                    @Html.ActionLink("Editar", "Editar", new { id = item.Id },new { @class = "btn btn-warning" }) 
+                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id },new { @class = "btn btn-info" }) 
+                    @Html.ActionLink("Apagar", "Apagar", new { id = item.Id },new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

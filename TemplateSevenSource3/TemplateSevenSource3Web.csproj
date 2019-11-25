@@ -122,8 +122,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ErroController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocacaoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManutencaoController.cs" />
     <Compile Include="Controllers\MarcaController.cs" />
@@ -440,6 +442,13 @@
     <Content Include="Views\Funcionario\Editar.cshtml" />
     <Content Include="Views\Funcionario\Apagar.cshtml" />
     <Content Include="Views\Funcionario\Menu.cshtml" />
+    <Content Include="Views\Categoria\Lista.cshtml" />
+    <Content Include="Views\Veiculo\DetalhesIndex.cshtml" />
+    <Content Include="Views\Locacao\Cadastro.cshtml" />
+    <Content Include="Views\Locacao\Index.cshtml" />
+    <Content Include="Views\Locacao\Pagamento.cshtml" />
+    <Content Include="Views\Erro\NaoEncontrado.cshtml" />
+    <Content Include="Views\Erro\erro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

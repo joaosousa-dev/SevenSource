@@ -10,7 +10,7 @@
     <p>
         @Html.ActionLink("Cadastrar nova manutenção", "Cadastro")
     </p>
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
@@ -45,16 +45,8 @@
             <th>&nbsp;</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>&nbsp;</th>
+            
+
         </tr>
 
         @foreach (var item in Model)
@@ -92,16 +84,7 @@
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                
                 <td>
                     @Html.ActionLink("Editar", "Editar", new { id = item.Id }, new { @class = "btn btn-warning" })
                     @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }, new { @class = "btn btn-info" })

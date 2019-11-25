@@ -24,62 +24,110 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Cadastro(Manutencao manutencao)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodo = new MetodosBDMANUT();
-                metodo.CadastrarManutencao(manutencao);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodo = new MetodosBDMANUT();
+                    metodo.CadastrarManutencao(manutencao);
+                    return RedirectToAction("Index");
+                }
+                return View(manutencao);
             }
-            return View(manutencao);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Editar(int id)
         {
-            var metodo = new MetodosBDMANUT();
-            var manutencao = metodo.ListaId(id);
-            if (manutencao == null)
+            try
             {
-                return HttpNotFound();
-            }
+                var metodo = new MetodosBDMANUT();
+                var manutencao = metodo.ListaId(id);
+                if (manutencao == null)
+                {
+                    return HttpNotFound();
+                }
 
-            return View(manutencao);
+                return View(manutencao);
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Editar(Manutencao manutencao)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodo = new MetodosBDMANUT();
-                metodo.AtualizarManutencao(manutencao);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodo = new MetodosBDMANUT();
+                    metodo.AtualizarManutencao(manutencao);
+                    return RedirectToAction("Index");
+                }
+                return View(manutencao);
             }
-            return View(manutencao);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Apagar(int id)
         {
-            var metodo = new MetodosBDMANUT();
-            var manutencao = metodo.ListaId(id);
-            if (manutencao == null)
+            try
             {
-                return HttpNotFound();
+                var metodo = new MetodosBDMANUT();
+                var manutencao = metodo.ListaId(id);
+                if (manutencao == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(manutencao);
             }
-            return View(manutencao);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Apagar(Manutencao manutencao, int id)
         {
-            var metodo = new MetodosBDMANUT();
-            metodo.DeletarManutencao(id);
-            return RedirectToAction("Index");
+            try
+            {
+                var metodo = new MetodosBDMANUT();
+                metodo.DeletarManutencao(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Detalhes(int id)
         {
-            var metodo = new MetodosBDMANUT();
-            var manutencao = metodo.ListaId(id);
-            if (manutencao == null)
+            try
             {
-                return HttpNotFound();
+                var metodo = new MetodosBDMANUT();
+                var manutencao = metodo.ListaId(id);
+                if (manutencao == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(manutencao);
             }
-            return View(manutencao);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
     }
 }

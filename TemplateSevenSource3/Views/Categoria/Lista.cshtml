@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TemplateSevenSource3.Dominio.Categoria>
+
+@{
+    ViewBag.Title = "Lista de categorias";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<h2 class="text-center">Categorias</h2>
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            <h2 class="modal-title">@Html.DisplayNameFor(model => model.Tipo)s</h2>
+        </th>
+        <th>
+            <h2 class="modal-title">@Html.DisplayNameFor(model => model.Descricao)</h2>
+        </th>
+        <th>
+           <h2 class="modal-title"> @Html.DisplayNameFor(model => model.Valor_p_dia)</h2>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <h4 class="badge">@Html.DisplayFor(modelItem => item.Tipo)</h4>
+            </td>
+            <td>
+                <h4 class="badge "> @Html.DisplayFor(modelItem => item.Descricao)</h4>
+            </td>
+
+            <td>
+                <h4 class="badge"> @Html.DisplayFor(modelItem => item.Valor_p_dia)</h4>
+            </td>
+        </tr>
+    }
+
+</table>

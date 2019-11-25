@@ -1,0 +1,87 @@
+﻿@model TemplateSevenSource3Dominio.Veiculo
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2 class="text-center">Detalhes</h2>
+
+<div>
+    <h4 class="text-center">
+        @Html.DisplayFor(model => model.Modelo)
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cambio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cambio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeMarca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeMarca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fotopath)
+        </dt>
+
+        <dd>
+            <div class="row">
+                <div class="col-xs-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src="@Url.Content("~/Content/CarrosImg/"+Model.fotopath)" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar à lista", "Lista")
+</p>

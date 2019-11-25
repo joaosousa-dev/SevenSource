@@ -60,8 +60,7 @@ namespace TemplateSevenSource3.Metodos
             var strQuery = "";
             strQuery += string.Format("UPDATE FUNCIONARIO SET ");
             strQuery += string.Format("NOMEFUN='{0}', ",funcionario.Nome);
-            strQuery += string.Format("SENHAFUN='{0}',", funcionario.Senha);
-            strQuery += string.Format("CPFFUN=UPPER'{0}',", funcionario.Cpf);
+            strQuery += string.Format("CPFFUN='{0}',", funcionario.Cpf);
             strQuery += string.Format("IDCARGO={0} ", funcionario.IdCargo);
             strQuery += string.Format("WHERE IDFUN={0}",funcionario.Id);
             banco.ExecutarComando(strQuery);
@@ -87,7 +86,6 @@ namespace TemplateSevenSource3.Metodos
                     Nome = retorno["NOMEFUN"].ToString(),
                     IdCargo = int.Parse(retorno["IDCARGO"].ToString()),
                     Cpf= retorno["CPFFUN"].ToString(),
-                    NivelCargo = int.Parse(retorno["NIVELCARGO"].ToString()),
                     NomeCargo = retorno["NOMECARGO"].ToString(),
                 };
                 funcionario.Add(TempFuncionario);

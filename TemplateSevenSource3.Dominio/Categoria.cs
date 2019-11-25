@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,10 @@ namespace TemplateSevenSource3.Dominio
     {
         public int Id { get; set; }
         [DataType(DataType.MultilineText)]
+        [DisplayName("Descrição")]
         public string Descricao { get; set; }
         public string Tipo { get; set; }
-        public decimal Valor_p_dia { get; set; }
+        [DisplayName("Valor")]
+        public float Valor_p_dia { get; set; }
     }
 }

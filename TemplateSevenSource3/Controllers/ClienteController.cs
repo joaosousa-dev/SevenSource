@@ -25,66 +25,114 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Cadastro(Cliente cliente)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodosbd = new metodosBDCLI();
-                metodosbd.CadastroCLI(cliente);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodosbd = new metodosBDCLI();
+                    metodosbd.CadastroCLI(cliente);
+                    return RedirectToAction("Index");
+                }
+                return View(cliente);
             }
-            return View(cliente);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Editar(long cpf)
         {
-            var banco = new Banco();
-            var metodosusuario = new metodosBDCLI();
-            var cliente = metodosusuario.ListaId(cpf);            
-            cliente.idend= banco.RetornaIdEnd(cliente);
-            if (cliente == null)
+            try
             {
-                return HttpNotFound();
+                var banco = new Banco();
+                var metodosusuario = new metodosBDCLI();
+                var cliente = metodosusuario.ListaId(cpf);
+                cliente.idend = banco.RetornaIdEnd(cliente);
+                if (cliente == null)
+                {
+                    return HttpNotFound();
+                }
+
+                return View(cliente);
             }
-            
-            return View(cliente);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Editar(Cliente cliente)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodosusuario = new metodosBDCLI();
-                metodosusuario.AtualizarCLI(cliente);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodosusuario = new metodosBDCLI();
+                    metodosusuario.AtualizarCLI(cliente);
+                    return RedirectToAction("Index");
+                }
+                return View(cliente);
             }
-            return View(cliente);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Apagar(long cpf)
         {
-            var metodosusuario = new metodosBDCLI();
-            var cliente=metodosusuario.ListaId(cpf);
-            if (cliente == null)
+            try
             {
-                return HttpNotFound();
+                var metodosusuario = new metodosBDCLI();
+                var cliente = metodosusuario.ListaId(cpf);
+                if (cliente == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(cliente);
             }
-            return View(cliente);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
 
         [HttpPost]
         public ActionResult Apagar(Cliente cliente,long cpf)
         {
-            var metodosusuario = new metodosBDCLI();
-            metodosusuario.DeletarCLI(cpf);
-            return RedirectToAction("Index");
+            try
+            {
+                var metodosusuario = new metodosBDCLI();
+                metodosusuario.DeletarCLI(cpf);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
 
         public ActionResult Detalhes(long cpf)
         {
-            var metodosusuario = new metodosBDCLI();
-           var cliente = metodosusuario.ListaId(cpf);
-            if (cliente == null)
+            try
             {
-                return HttpNotFound();
+                var metodosusuario = new metodosBDCLI();
+                var cliente = metodosusuario.ListaId(cpf);
+                if (cliente == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(cliente);
             }
-            return View(cliente);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         
     }

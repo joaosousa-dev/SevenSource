@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using MySql.Data.MySqlClient;
 using TemplateSevenSource3Dominio;
+using System.Web.Routing;
 
 namespace TemplateSevenSource3AcessoDados
 {
@@ -17,36 +18,20 @@ namespace TemplateSevenSource3AcessoDados
 
         public Banco()
         {
-            conexao = new SqlConnection(@"Data Source=LAB2PC007;Initial Catalog=LOCADORASEVENCAR;User ID=sa;Password=1234567");
+            conexao = new SqlConnection(@"Data Source=SOUSA-PC;Initial Catalog=LOCADORASEVENCAR;User ID=sa;Password=joaovictor");
             conexao.Open();
         }
         public void ExecutarComando(string strQuery)
-        {
-            try
-            {
+        {           
                 SqlCommand cmd = new SqlCommand(strQuery, conexao);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
+                cmd.ExecuteNonQuery();          
         }
         public SqlDataReader ExecultarConsulta(string strQuery)
         {
-            try
-            {
+            
                 SqlCommand cmd = new SqlCommand(strQuery, conexao);
-                return cmd.ExecuteReader();
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-        }
+                return cmd.ExecuteReader();            
+       }
         public int RetornaIdEnd(Cliente cliente)
         {
             SqlDataAdapter da = new SqlDataAdapter();

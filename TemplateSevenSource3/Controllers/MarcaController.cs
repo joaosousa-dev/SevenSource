@@ -27,13 +27,21 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Cadastro(Marca marca)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodosmarca = new MetodosBDMARCA();
-                metodosmarca.CadastrarMarca(marca);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodosmarca = new MetodosBDMARCA();
+                    metodosmarca.CadastrarMarca(marca);
+                    return RedirectToAction("Index");
+                }
+                return View(marca);
             }
-            return View(marca);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Editar(int id)
         {
@@ -50,40 +58,72 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Editar(Marca marca)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodosmarca = new MetodosBDMARCA();
-                metodosmarca.AtualizarMarca(marca);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodosmarca = new MetodosBDMARCA();
+                    metodosmarca.AtualizarMarca(marca);
+                    return RedirectToAction("Index");
+                }
+                return View(marca);
             }
-            return View(marca);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Apagar(int id)
         {
-            var metodosmarca = new MetodosBDMARCA();
-            var marca = metodosmarca.ListaId(id);
-            if (marca == null)
+            try
             {
-                return HttpNotFound();
+                var metodosmarca = new MetodosBDMARCA();
+                var marca = metodosmarca.ListaId(id);
+                if (marca == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(marca);
             }
-            return View(marca);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Apagar(Marca marca,int id)
         {
-            var metodosmarca = new MetodosBDMARCA();
-            metodosmarca.DeletarMarca(id);
-            return RedirectToAction("Index");
+            try
+            {
+                var metodosmarca = new MetodosBDMARCA();
+                metodosmarca.DeletarMarca(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Detalhes(int id)
         {
-            var metodosmarca = new MetodosBDMARCA();
-            var marca = metodosmarca.ListaId(id);
-            if (marca == null)
+            try
             {
-                return HttpNotFound();
+                var metodosmarca = new MetodosBDMARCA();
+                var marca = metodosmarca.ListaId(id);
+                if (marca == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(marca);
             }
-            return View(marca);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
     }
 

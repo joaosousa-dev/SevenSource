@@ -23,21 +23,18 @@ namespace TemplateSevenSource3.Controllers
 
             funcionario=metodo.TestarUsuario(funcionario);
 
-            // foi devolvido um resultado do banco, caso as informaççoes
-            // do banco forem diferentes de nula, ou seja se foram
-            // encontradas informações no banco serão criadas sessões
+            
             if (funcionario.Login != null && funcionario.Senha != null)
             {
                 FormsAuthentication.SetAuthCookie(funcionario.Login, false);
                 Session["usuarioLogado"] = funcionario.Login.ToString();
                 Session["senhaLogado"] = funcionario.Senha.ToString();
                 Session["nomeCargo"] = funcionario.NomeCargo.ToString(); ;
-                //direcionando o usuario para pagina Index da home
                 return RedirectToAction("Menu", "Funcionario");
             }
             else
             {
-                // se estiver errado usuário e senha permaneça na pagina login
+                Session["usuarioNegado"] = "NEGADO";
                 return RedirectToAction("Entrar", "Login");
             }
         }

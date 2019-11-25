@@ -24,62 +24,109 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Cadastro(Funcionario funcionario)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodo = new MetodosBDFUNC();
-                metodo.CadastroFUNC(funcionario);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodo = new MetodosBDFUNC();
+                    metodo.CadastroFUNC(funcionario);
+                    return RedirectToAction("Index");
+                }
+                return View(funcionario);
             }
-            return View(funcionario);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Editar(int id)
         {
-            var metodo = new MetodosBDFUNC();
-            var funcionario = metodo.ListaId(id);
-            if (funcionario == null)
+            try
             {
-                return HttpNotFound();
-            }
+                var metodo = new MetodosBDFUNC();
+                var funcionario = metodo.ListaId(id);
+                if (funcionario == null)
+                {
+                    return HttpNotFound();
+                }
 
-            return View(funcionario);
+                return View(funcionario);
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Editar(Funcionario funcionario)
         {
-            if (ModelState.IsValid)
-            {
-                var metodo = new MetodosBDFUNC();
-                metodo.AtualizarFUNC(funcionario);
-                return RedirectToAction("Index");
+            try{
+                if (funcionario.Nome != null && funcionario.IdCargo != 0 && funcionario.Login != null && funcionario.Cpf != null)
+                {
+                    var metodo = new MetodosBDFUNC();
+                    metodo.AtualizarFUNC(funcionario);
+                    return RedirectToAction("Index");
+                }
+                return View(funcionario);
             }
-            return View(funcionario);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Apagar(int id)
         {
-            var metodo = new MetodosBDFUNC();
-            var funcionario = metodo.ListaId(id);
-            if (funcionario == null)
+            try
             {
-                return HttpNotFound();
+                var metodo = new MetodosBDFUNC();
+                var funcionario = metodo.ListaId(id);
+                if (funcionario == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(funcionario);
             }
-            return View(funcionario);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Apagar(Funcionario funcionario, int id)
         {
-            var metodo = new MetodosBDFUNC();
-            metodo.DeletarFUNC(id);
-            return RedirectToAction("Index");
+            try
+            {
+                var metodo = new MetodosBDFUNC();
+                metodo.DeletarFUNC(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Detalhes(int id)
         {
-            var metodo = new MetodosBDFUNC();
-            var funcionario = metodo.ListaId(id);
-            if (funcionario == null)
+            try
             {
-                return HttpNotFound();
+                var metodo = new MetodosBDFUNC();
+                var funcionario = metodo.ListaId(id);
+                if (funcionario == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(funcionario);
             }
-            return View(funcionario);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Menu()
         {

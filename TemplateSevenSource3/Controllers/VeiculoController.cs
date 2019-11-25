@@ -31,18 +31,28 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Cadastro(Veiculo veiculo,HttpPostedFileBase file)
         {
-            if (ModelState.IsValid)
+            try
             {
-                if(file.FileName != null)
+                if (ModelState.IsValid)
                 {
-                    //string caminho = @"\\Content\\CarrosImg\\" + file.FileName.ToString();
-                    veiculo.fotopath = file.FileName;
+                    if (file.FileName != null)
+                    {
+                        //string caminho = @"\\Content\\CarrosImg\\" + file.FileName.ToString();
+                        veiculo.fotopath = file.FileName;
+                    }
+                    var metodosveiculo = new MetodosBDVEICULO();
+                    metodosveiculo.CadastroVeiculo(veiculo);
+                    return RedirectToAction("Index");
+
                 }
-                var metodosveiculo = new MetodosBDVEICULO();
-                metodosveiculo.CadastroVeiculo(veiculo);
-                return RedirectToAction("Index");
+
+                return View(veiculo);
             }
-            return View(veiculo);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Editar(int id)
         {
@@ -58,32 +68,74 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Editar(Veiculo veiculo)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodosBDVEICULO = new MetodosBDVEICULO();
-                metodosBDVEICULO.AtualizarVeiculo(veiculo);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodosBDVEICULO = new MetodosBDVEICULO();
+                    metodosBDVEICULO.AtualizarVeiculo(veiculo);
+                    return RedirectToAction("Index");
+                }
+                return View(veiculo);
             }
-            return View(veiculo);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Apagar(int id)
         {
-            var metodosBDVEICULO= new MetodosBDVEICULO();
-            var veiculo = metodosBDVEICULO.ListaId(id);
-            if (veiculo == null)
+            try
             {
-                return HttpNotFound();
+                var metodosBDVEICULO = new MetodosBDVEICULO();
+                var veiculo = metodosBDVEICULO.ListaId(id);
+                if (veiculo == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(veiculo);
             }
-            return View(veiculo);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Apagar(Veiculo veiculo,int id)
         {
-            var metodosBDVEICULO = new MetodosBDVEICULO();
-            metodosBDVEICULO.DeletarVeiculo(id);
-            return RedirectToAction("Index");
+            try
+            {
+                var metodosBDVEICULO = new MetodosBDVEICULO();
+                metodosBDVEICULO.DeletarVeiculo(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Detalhes(int id)
+        {
+            try
+            {
+                var metodosBDVEICULO = new MetodosBDVEICULO();
+                var veiculo = metodosBDVEICULO.ListaId(id);
+                if (veiculo == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(veiculo);
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
+        }
+        public ActionResult DetalhesIndex(int id)
         {
             var metodosBDVEICULO = new MetodosBDVEICULO();
             var veiculo = metodosBDVEICULO.ListaId(id);

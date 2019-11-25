@@ -18,15 +18,16 @@ namespace TemplateSevenSource3Dominio
         public string Nome { get; set; }
         [DisplayName("Senha")]
         [Required(ErrorMessage = "A Senha é obrigatória")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
         [Compare("Senha", ErrorMessage = "As senhas são diferentes")]
+        [DataType(DataType.Password)]
         [DisplayName("Confirmar senha")]
         public string ConfirmarSenha { get; set; }
         [DisplayName("CPF")]
         public string Cpf { get; set; }
         [DisplayName("ID Cargo")]
         public int IdCargo { get; set; }
-        public int NivelCargo { get; set; }
         public string NomeCargo { get; set; }
     }
 }

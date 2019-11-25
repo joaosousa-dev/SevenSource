@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "erro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">erro</h2>
+@if (Session["erro"] != null)
+{
+    
+    <h5 style="color:red" class="jumbotron text-center">Erro : @Session["erro"].()</h5>
+    Session["erro"] = null;
+}
+else
+{
+    <h3 class="jumbotron text-center" style="color:forestgreen">Erro Não encontrado :)</h3>
+    <div class="form-group">@Html.ActionLink("Voltar ao menu","Menu","Funcionario")</div>
+}
+

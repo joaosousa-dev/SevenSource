@@ -11,7 +11,7 @@
         <p>
             @Html.ActionLink("Novo Cliente", "Cadastro")
         </p>
-        <table class="table">
+        <table class="table table-striped">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Nome)
@@ -45,9 +45,9 @@
                         @Html.DisplayFor(modelItem => item.Cpf)
                     </td>
                     <td>
-                        @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf }) |
-                        @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf }) |
-                        @Html.ActionLink("Apagar", "Apagar", new { cpf = item.Cpf })
+                        @Html.ActionLink("Editar", "Editar", new { cpf = item.Cpf },new { @class = "btn btn-warning" }) 
+                        @Html.ActionLink("Detalhes", "Detalhes", new { cpf = item.Cpf },new { @class = "btn btn-info" }) 
+                        @Html.ActionLink("Apagar", "Apagar", new { cpf = item.Cpf },new { @class = "btn btn-danger" })
                     </td>
                 </tr>
             }

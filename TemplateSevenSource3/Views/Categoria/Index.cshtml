@@ -9,7 +9,7 @@
     <p>
         @Html.ActionLink("Cadastrar nova categoria", "Cadastro")
     </p>
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Id)
@@ -42,8 +42,8 @@
                     @Html.DisplayFor(modelItem => item.Valor_p_dia)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Editar", new { id = item.Id }, new { @class = "btn btn-warning" }) <br /><br />
-                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }, new { @class = "btn btn-info" }) <br /><br />
+                    @Html.ActionLink("Editar", "Editar", new { id = item.Id }, new { @class = "btn btn-warning" }) 
+                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }, new { @class = "btn btn-info" }) 
                     @Html.ActionLink("Apagar", "Apagar", new { id = item.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>

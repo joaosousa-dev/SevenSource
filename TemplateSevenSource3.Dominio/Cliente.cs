@@ -18,8 +18,8 @@ namespace TemplateSevenSource3Dominio
         [Required(ErrorMessage = "A CNH é obrigatório")]
         public string Cnh { get; set; }
         [DisplayName("CPF")]
-        [Required(ErrorMessage = "\n\n\n\n\n\n\n\n\n\n\n\nO CPF é obrigatório")]
-        [RegularExpression(@"[1-9]{11,11}", ErrorMessage = "CPF 11 Dígitos")]
+        [Required(ErrorMessage = "O CPF é obrigatório")]
+        [RegularExpression(@"[0-9]{11,11}", ErrorMessage = "CPF 11 Dígitos")]
         public long Cpf { get; set; }
         [DisplayName("Telefone Móvel")]
         public string TelMovel { get; set; }

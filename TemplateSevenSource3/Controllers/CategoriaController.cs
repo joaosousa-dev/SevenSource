@@ -26,13 +26,21 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Cadastro(Categoria categoria)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodoscategoria = new MetodosBDCATEG();
-                metodoscategoria.CadastrarCategoria(categoria);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodoscategoria = new MetodosBDCATEG();
+                    metodoscategoria.CadastrarCategoria(categoria);
+                    return RedirectToAction("Index");
+                }
+                return View(categoria);
             }
-            return View(categoria);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Editar(int id)
         {
@@ -48,40 +56,72 @@ namespace TemplateSevenSource3.Controllers
         [HttpPost]
         public ActionResult Editar(Categoria categoria)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var metodoscategoria = new MetodosBDCATEG();
-                metodoscategoria.AtualizarCategoria(categoria);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var metodoscategoria = new MetodosBDCATEG();
+                    metodoscategoria.AtualizarCategoria(categoria);
+                    return RedirectToAction("Index");
+                }
+                return View(categoria);
             }
-            return View(categoria);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Apagar(int id)
         {
-            var metodoscategoria = new MetodosBDCATEG();
-            var categoria = metodoscategoria.ListaId(id);
-            if (categoria == null)
+            try
             {
-                return HttpNotFound();
+                var metodoscategoria = new MetodosBDCATEG();
+                var categoria = metodoscategoria.ListaId(id);
+                if (categoria == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(categoria);
             }
-            return View(categoria);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         [HttpPost]
         public ActionResult Apagar(Categoria categoria, int id)
         {
-            var metodoscategoria = new MetodosBDCATEG();
-            metodoscategoria.DeletarCategoria(id);
-            return RedirectToAction("Index");
+            try
+            {
+                var metodoscategoria = new MetodosBDCATEG();
+                metodoscategoria.DeletarCategoria(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Detalhes(int id)
         {
-            var metodoscategoria = new MetodosBDCATEG();
-            var categoria = metodoscategoria.ListaId(id);
-            if (categoria == null)
+            try
             {
-                return HttpNotFound();
+                var metodoscategoria = new MetodosBDCATEG();
+                var categoria = metodoscategoria.ListaId(id);
+                if (categoria == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(categoria);
             }
-            return View(categoria);
+            catch (Exception ex)
+            {
+                Session["erro"] = ex.Message;
+                return RedirectToAction("Erro", "erro");
+            }
         }
         public ActionResult Lista()
         {
@@ -89,5 +129,6 @@ namespace TemplateSevenSource3.Controllers
             var todascategorias = metodoscategoria.ListarCategoria();
             return View(todascategorias);
         }
+        
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TemplateSevenSource3.Dominio;
 using TemplateSevenSource3AcessoDados;
+using TemplateSevenSource3Dominio;
 
 namespace TemplateSevenSource3.Metodos
 {
@@ -52,7 +53,7 @@ namespace TemplateSevenSource3.Metodos
                 {
                     Id = int.Parse(retorno["IDCATEGORIA"].ToString()),
                     Tipo = retorno["TIPOCATEGORIA"].ToString(),
-                    Valor_p_dia = decimal.Parse(retorno["VALOR_P_DIA"].ToString()),
+                    Valor_p_dia = float.Parse(retorno["VALOR_P_DIA"].ToString()),
                     Descricao = retorno["DSCATEGORIA"].ToString()
                 };
                 categoria.Add(TempCategoria);
@@ -69,6 +70,42 @@ namespace TemplateSevenSource3.Metodos
                 var retorno = banco.ExecultarConsulta(strQuery);
                 return ListaDeCategoria(retorno).FirstOrDefault();
             }
+        }
+        public Veiculo ListaCarros(int id)
+        {
+            using (banco = new Banco())
+            {
+                // var strQuery = string.Format("SELECT * FROM TELEFONE as T INNER JOIN CLIENTE as C on T.CPFCLIENTE = C.CPFCLIENTE where T.CPFCLIENTE={0}", cpf);
+                var strQuery = string.Format("SELECT * FROM VWVEICULO where IDCATEGORIA={0}", id);
+                var retorno = banco.ExecultarConsulta(strQuery);
+                return ListaDeVeiculos(retorno).FirstOrDefault();
+            }
+        }
+        public List<Veiculo> ListaDeVeiculos(SqlDataReader retorno)
+        {
+            var veiculo = new List<Veiculo>();
+            while (retorno.Read())
+            {
+                var Tempveiculo = new Veiculo()
+                {
+                    Id = int.Parse(retorno["IDVEICULO"].ToString()),
+                    Modelo = retorno["MODELO"].ToString(),
+                    Ano = int.Parse(retorno["ANO"].ToString()),
+                    Placa = retorno["PLACA"].ToString(),
+                    Cambio = char.Parse(retorno["CAMBIO"].ToString()),
+                    Status = retorno["STATUS_VEICULO"].ToString(),
+                    TipoCategoria = retorno["TIPOCATEGORIA"].ToString(),
+                    NomeMarca = retorno["NOMEMARCA"].ToString(),
+                    DsManutencao = retorno["DSMANUTENCAO"].ToString(),
+                    IdCategoria = int.Parse(retorno["IDCATEGORIA"].ToString()),
+                    IdMarca = int.Parse(retorno["IDMARCA"].ToString()),
+                    IdManutencao = int.Parse(retorno["IDMANUTENCAO"].ToString()),
+                    fotopath = retorno["FOTO"].ToString()
+                };
+                veiculo.Add(Tempveiculo);
+            }
+            retorno.Close();
+            return veiculo;
         }
     }
 }

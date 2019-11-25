@@ -1,0 +1,107 @@
+﻿@model IEnumerable<TemplateSevenSource3Dominio.Locacao>
+
+@{
+    ViewBag.Title = "Locações";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container">
+
+        <h2 class="text-center">Locações</h2>
+
+        <p>
+            &nbsp; &nbsp;@Html.ActionLink("Cadastrar nova locação", "Cadastro")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModeloVeiculo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoriaVeiculo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorLocacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CpfCliente)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NomeCliente)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.NomeFuncionario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Retirada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entrega)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SituacaoPagamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SituacaoLocacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlacaVeiculo)
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModeloVeiculo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoriaVeiculo)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorLocacao)R$
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CpfCliente)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NomeCliente)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NomeFuncionario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Retirada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Entrega)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SituacaoPagamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SituacaoLocacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlacaVeiculo)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Devolução", "Devolucao", new {id = item.Id, idv = item.IdVeiculo}, new { @class = "btn btn-info" })
+                        @Html.ActionLink("Pagar", "Pagamento", new { id = item.Id }, new { @class = "btn btn-success" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+

@@ -15,16 +15,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
 
 
-<body style="width: 100%; height: 100%; text-align: center; background-size:auto; background-repeat:no-repeat; background-image:linear-gradient(to bottom, rgba(86, 72, 72, 0.76), rgba(16, 10, 10, 0.88));">
+<body>
     @using (Html.BeginForm("Entrar", "Login", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
 
-        <div class="container" style="border-style:solid; border-radius:10px;background:rgba(128, 128, 128, 0.79); width:30%; height:100%; padding:50px; margin:auto; margin-top:10%; display: flex; flex-direction: row; justify-content: center; align-items: center">
+        <div class="container" style="border-style:solid; border-radius:10px;background:rgb(128, 128, 128); width:30%; height:100%; padding:50px; margin:auto; margin-top:10%; display: flex; flex-direction: row; justify-content: center; align-items: center">
             <div>
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
@@ -49,6 +49,11 @@
                 <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
                         <input type="submit" value="Entrar" class="btn btn-primary" />
+                        @if (Session["usuarioNegado"] != null)
+                        {
+                            <h5 style="color:red">Usuário ou senha incorretos,Tente novamente</h5>
+                            Session["usuarioNegado"] = null;
+                        }
                     </div>
                 </div>
             </div>
@@ -59,6 +64,5 @@
         @Scripts.Render("~/bundles/jqueryval")
     }
     <br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
 </html>

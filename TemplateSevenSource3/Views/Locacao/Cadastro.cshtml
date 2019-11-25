@@ -1,0 +1,123 @@
+﻿@model TemplateSevenSource3Dominio.Locacao
+
+@{
+    ViewBag.Title = "Nova locação";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container">
+
+    <h2>Cadastro</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Locacao</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdVeiculo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IdVeiculo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdVeiculo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CpfCliente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CpfCliente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CpfCliente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdFuncionario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IdFuncionario, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdFuncionario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Retirada, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Retirada, new { htmlAttributes = new { @class = "form-control", id = string.Format("retirada") } })
+                @Html.ValidationMessageFor(model => model.Retirada, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Entrega, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Entrega, new { htmlAttributes = new { @class = "form-control", id = string.Format("entrega") } })
+                @Html.ValidationMessageFor(model => model.Entrega, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TotalDias, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TotalDias, new { htmlAttributes = new { @class = "form-control", id = string.Format("Tdias") } })
+                @Html.ValidationMessageFor(model => model.TotalDias, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" class="btn btn-danger form-control" value="Calcular dias" onclick="calcular()" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Valor_p_diaCategoria, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Valor_p_diaCategoria, new { htmlAttributes = new { @class = "form-control", id = string.Format("valordia") } })
+                @Html.ValidationMessageFor(model => model.Valor_p_diaCategoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ValorLocacao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ValorLocacao, new { htmlAttributes = new { @class = "form-control", id = string.Format("total") } })
+                @Html.ValidationMessageFor(model => model.ValorLocacao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" class="btn btn-danger form-control" value="Calcular Valor total" onclick="calculartotal()" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+
+    <div>
+        @Html.ActionLink("Voltar as locações", "Index")
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        function calcular() {
+            var dt1 = new Date(document.getElementById('retirada').value);
+            var dt2 = new Date(document.getElementById('entrega').value);
+            var dias = Math.abs(dt2.getDate() - dt1.getDate())
+            document.getElementById('Tdias').value = dias
+        }
+        function calculartotal() {
+            var n1 = document.getElementById('Tdias').value;
+            var n2 = document.getElementById('valordia').value;
+            var result = (n1 * n2);
+            document.getElementById('total').value = result
+        }
+    </script>
+}
